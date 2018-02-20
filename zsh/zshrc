@@ -1,0 +1,41 @@
+ZSH=${HOME}/.zsh
+ZSH_CACHE_DIR=${ZSH}/cache/
+fpath=($ZSH/functions $fpath)
+ppath=($ZSH/plugins)
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:${HOME}/bin:
+autoload -U colors zsh/terminfo && colors
+autoload -U promptinit && promptinit
+autoload -U compinit && compinit    #Initilize && load completion system
+
+source ${ZSH}/config_files/aliases.zsh
+source ${ZSH}/config_files/colors.zsh
+source ${ZSH}/config_files/completion.zsh
+source ${ZSH}/config_files/enviroment.zsh
+source ${ZSH}/config_files/git.zsh
+source ${ZSH}/config_files/history.zsh
+source ${ZSH}/config_files/key-bindings.zsh
+source ${ZSH}/config_files/prompt.zsh
+source ${ZSH}/config_files/setopt.zsh
+source ${ZSH}/config_files/spectrum.zsh
+source ${ZSH}/config_files/theme-and-appearance.zsh
+
+source ${ZSH}/themes/gitster.zsh-theme
+source ${ZSH}/base16-shell/scripts/base16-atelier-sulphurpool.sh
+
+#
+# PLUGINS
+#
+source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ppath/z/z.sh
+source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source $ppath/ranger.plugin.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+
+#ENABLE_CORRECTION="true"
+#
+export TERM='xterm-256color'
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
