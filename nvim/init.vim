@@ -78,11 +78,10 @@ let g:ale_sign_warning = '!'
 let NERDTreeIgnore = [ '\.pyc$', 'cache$', '__pycache__$', 'node_modules$' ]
 let g:airline_powerline_fonts = 1
 
-" Setup ALE error highligting highlights
-"
-let [guibg, ctermbg] = customFunctions#GetBackground('LineNr')
+" Setup ALE error highligting highlights; uses base16-sulphurpool bg and fg
 
-execute "highlight ALEErrorSign guifg=#c94922 guibg=" . guibg
+execute "highlight ALEErrorSign guifg=#c94922 guibg=#293256"
+
 highlight CursorLineNr guifg=#ac9739
 
 set path+=**
