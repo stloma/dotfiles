@@ -128,8 +128,11 @@ nmap <leader>l <Plug>(ale_fix)                " Lint file
 " nmap <silent><C-k> <Plug>(ale_previous_wrap)  " Jump to previous linting error
 " nmap <silent><C-j> <Plug>(ale_next_wrap)      " Jump to next linting error
 
+map <leader>f <Plug>(easymotion-bd-f)
+map <Leader>j <Plug>(easymotion-bd-jk)
+map <Leader>k <Plug>(easymotion-bd-jk)
 
-noremap <leader>G :Goyo<CR>
+nnoremap <leader>G :Goyo<CR>
 
 nnoremap <leader>g :GitGutterToggle<CR>
 
