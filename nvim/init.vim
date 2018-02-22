@@ -183,6 +183,3 @@ nnoremap <leader>p "+p
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map <leader>b :b#<cr>          " go back to previous buffer
 map <leader>q :bd<cr>          " close current buffer
-
-nnoremap <silent> n   n:call customFunctions#HLNext(0.4)<cr>
-nnoremap <silent> N   N:call customFunctions#HLNext(0.4)<cr>
