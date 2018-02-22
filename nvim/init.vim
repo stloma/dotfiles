@@ -174,9 +174,9 @@ nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
 noremap zA zR
 noremap zC zM
-nnoremap <leader>s :noh <CR>        " clear search highlight until next search
-nnoremap <leader>w :w <CR>
-vnoremap <leader>y "+y              " yank/paste from clipboard
+nnoremap <leader>w :w<CR>
+nnoremap <leader>s :nohls <CR>
+vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 " buffers
