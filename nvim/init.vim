@@ -157,10 +157,13 @@ imap <C-L> <Right>
 imap <C-X> <del>
 
 " faster moving in normal mode
-nnoremap <C-j> 3j
-nnoremap <C-k> 3k
+" nnoremap <C-j> 3j
+" nnoremap <C-k> 3k
 nnoremap <C-h> b
 nnoremap <C-l> w
+
+nnoremap { 4k
+nnoremap } 4j
 
 nnoremap <leader>r :w <CR> :! browser-sync reload<CR><CR>
 
