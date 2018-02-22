@@ -58,6 +58,8 @@ set encoding=utf-8
 autocmd BufWinLeave * mkview
 autocmd BufWinEnter * silent loadview
 set foldlevel=99
+highlight Search guibg=#782b14 guifg=#de917a
+highlight IncSearch guibg=#782b14 guifg=#de917a
 
 "
 " Plugin Customization
