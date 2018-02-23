@@ -116,11 +116,12 @@ let mapleader=","
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>
 
-nmap <leader>l <Plug>(ale_fix)                " Lint file
-" nmap <silent><C-k> <Plug>(ale_previous_wrap)  " Jump to previous linting error
-" nmap <silent><C-j> <Plug>(ale_next_wrap)      " Jump to next linting error
+nmap <leader>l <Plug>(ale_fix)
+" nmap <silent><C-k> <Plug>(ale_previous_wrap)
+" nmap <silent><C-j> <Plug>(ale_next_wrap)
 
-map <C-f> <Plug>(easymotion-bd-f)
+map f <Plug>(easymotion-bd-f)
+nnoremap <C-f> f
 map <C-j> <Plug>(easymotion-j)
 map <C-k> <Plug>(easymotion-k)
 " map  / <Plug>(easymotion-sn)
@@ -181,5 +182,5 @@ nnoremap <leader>p "+p
 
 " buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
-map <leader>b :b#<cr>          " go back to previous buffer
-map <leader>q :bd<cr>          " close current buffer
+map <leader>b :b#<cr>
+map <leader>q :bd<cr>
