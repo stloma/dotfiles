@@ -117,8 +117,8 @@ map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>
 
 nmap <leader>l <Plug>(ale_fix)
-" nmap <silent><C-k> <Plug>(ale_previous_wrap)
-" nmap <silent><C-j> <Plug>(ale_next_wrap)
+nmap <M-k> <Plug>(ale_previous_wrap)
+nmap <M-j> <Plug>(ale_next_wrap)
 
 map f <Plug>(easymotion-bd-f)
 nnoremap <C-f> f
