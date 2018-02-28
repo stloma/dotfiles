@@ -37,11 +37,12 @@ set relativenumber
 set number
 let loaded_matchparen = 1
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-set hidden              " Saves undo history when changing buffers
-set scrolloff=7         " Sets number of lines above and below cursor
-set cmdheight=2         " Increase command-line height; default is 1
-set laststatus=2        " Show statusline/airline
-set cursorline          " Show cursorline
+set hidden
+" Sets number of lines above and below cursor
+set scrolloff=7
+set cmdheight=2
+set laststatus=2
+set cursorline
 set ttyfast
 set expandtab
 set autoindent
