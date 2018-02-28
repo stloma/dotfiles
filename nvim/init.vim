@@ -120,14 +120,9 @@ nmap <leader>l <Plug>(ale_fix)
 nmap <M-k> <Plug>(ale_previous_wrap)
 nmap <M-j> <Plug>(ale_next_wrap)
 
-map f <Plug>(easymotion-bd-f)
-nnoremap <C-f> f
+map <C-f> <Plug>(easymotion-bd-f)
 map <C-j> <Plug>(easymotion-j)
 map <C-k> <Plug>(easymotion-k)
-" map  / <Plug>(easymotion-sn)
-" nmap <Leader>; <Plug>(easymotion-next)
-" map  n <Plug>(easymotion-next)
-" map  N <Plug>(easymotion-prev)
 
 nnoremap <leader>G :Goyo<CR>
 
