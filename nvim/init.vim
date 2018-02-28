@@ -161,6 +161,10 @@ nnoremap <leader>s :nohls <CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
+inoremap {<CR>  {<CR>}<Esc>O
+
+nnoremap + j$
+
 " buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map <leader>b :b#<cr>
