@@ -134,11 +134,6 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
-noremap h <NOP>
-noremap j <NOP>
-noremap k <NOP>
-noremap l <NOP>
-
 " enable mouse and scrolling
 nnoremap <leader>m :set mouse-=a<CR>
 nnoremap <leader>M :set mouse=a<CR>
