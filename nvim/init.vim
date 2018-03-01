@@ -21,6 +21,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
@@ -129,6 +130,8 @@ map <C-k> <Plug>(easymotion-k)
 nnoremap <leader>G :Goyo<CR>
 
 nnoremap <leader>g :GitGutterToggle<CR>
+
+nnoremap <leader>t :TagbarToggle<CR>
 
 nnoremap <leader>u :UndotreeToggle
 
