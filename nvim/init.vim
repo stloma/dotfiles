@@ -133,7 +133,7 @@ nnoremap <leader>g :GitGutterToggle<CR>
 
 nnoremap <leader>t :TagbarToggle<CR>
 
-nnoremap <leader>u :UndotreeToggle
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " disable arrow keys
 noremap <Up> <nop>
