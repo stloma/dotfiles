@@ -20,6 +20,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
+Plugin 'mbbill/undotree'
 
 call vundle#end()
 
@@ -128,6 +129,8 @@ map <C-k> <Plug>(easymotion-k)
 nnoremap <leader>G :Goyo<CR>
 
 nnoremap <leader>g :GitGutterToggle<CR>
+
+nnoremap <leader>u :UndotreeToggle
 
 " disable arrow keys
 noremap <Up> <nop>
