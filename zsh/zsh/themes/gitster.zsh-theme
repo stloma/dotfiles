@@ -1,5 +1,4 @@
-local ret_status="%(?:%{$fg[green]%}> :%{$fg_bold[red]%}> %s)"
-#local ret_status="%(?:%{$fg[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+local ret_status="%(?:%{$fg[yellow]%}≻ :%{$fg_bold[red]%}> %s)"
 
 function get_pwd(){
   git_root=$PWD
@@ -30,8 +29,5 @@ PROMPT='$(prompt_context)%{$fg[magenta]%}$(get_pwd) $ret_status%{$reset_color%}$
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}>%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[022]%}>%{$reset_color%}"
-
-#ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
-#ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[022]%}✓%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}⊁%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[022]%}≻%{$reset_color%} "
