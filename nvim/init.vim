@@ -168,7 +168,7 @@ nnoremap <leader>s :nohls <CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-inoremap {<CR>  {<CR>}<Esc>O
+inoremap <leader>{  {<CR>}<Esc>O
 
 nnoremap + j$
 
