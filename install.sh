@@ -1,4 +1,5 @@
 mkdir -p ~/.cache/vim
+mkdir -p ~/.config/tmux
 
 ln -s vim/vimrc ~/.vimrc
 ln -s vim/vim ~/.vim
