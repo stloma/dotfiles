@@ -97,7 +97,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:ale_linters = { 'javascript': ['eslint'], 'scss': ['prettier'], 'python': ['flake8'], 'html': ['tidy'] }
-let g:ale_fixers = { 'javascript': ['eslint'], 'scss': ['prettier'], 'python': ['autopep8'], 'html': ['tidy'] }
+let g:ale_fixers = { 'javascript': ['eslint'], 'scss': ['prettier'], 'python': ['autopep8'], 'html': ['tidy'], 'java': ['google_java_format'] }
 let g:ale_echo_msg_format = '%s [%linter%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '!'
@@ -158,6 +158,7 @@ nnoremap <leader>r :w <CR> :! browser-sync reload<CR><CR>
 
 " map <F8> :w <CR> :!clear && clang % && ./a.out <CR>
 " nnoremap <F8> :w <CR> :te python3.5 ./% <CR>
+autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
 
 nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
