@@ -28,7 +28,6 @@ source ${ZSH}/base16-shell/scripts/base16-atelier-sulphurpool.sh
 source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ppath/z/z.sh
 source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source $ppath/ranger.plugin.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 #ENABLE_CORRECTION="true"
