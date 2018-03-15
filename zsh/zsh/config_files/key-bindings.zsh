@@ -36,7 +36,7 @@ zle -N insert-last-command-output
 bindkey '^[x' insert-last-command-output
 
 bindkey '\ew' kill-region
-bindkey -s '\el' 'ls\n'
+# bindkey -s '\el' 'ls\n'
 bindkey '^r' history-incremental-search-backward
 
 bindkey ' ' magic-space
