@@ -1,8 +1,8 @@
 "
 " Vundle Setup
 "
-set rtp+=$HOME/.config/vundle/bundle/Vundle.vim
-call vundle#begin('$HOME/.config/vundle/bundle/')
+set rtp+=$HOME/.config/vundle/Vundle.vim
+call vundle#begin('$HOME/.config/vundle/')
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
