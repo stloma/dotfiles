@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg[yellow]%}≻ :%{$fg_bold[red]%}> %s)"
+local ret_status="%(?:%{$fg[yellow]%}≻ :%{$fg_bold[red]%}≻ %s)"
 
 function get_pwd(){
   git_root=$PWD
