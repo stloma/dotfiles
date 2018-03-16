@@ -14,6 +14,18 @@ mkcd () {
 }
 
 #
+# Vagrant
+alias vup='vagrantup'
+alias vlist='vagrant box list'
+alias vssh='vagrant ssh'
+alias vstatus='vagrant global-status'
+alias vprune='vagrant global-status --prune'
+alias vsnap='vagrant snapshot'
+alias vpack='vagrant package'
+alias vhalt='vagrant halt'
+alias vreload='vagrant reload'
+
+#
 # Git
 alias gst='git status -s'
 alias gaa='git add -A'
