@@ -15,7 +15,7 @@ mkcd () {
 
 #
 # Vagrant
-alias vup='vagrantup'
+alias vup='vagrant up'
 alias vlist='vagrant box list'
 alias vssh='vagrant ssh'
 alias vstatus='vagrant global-status'
