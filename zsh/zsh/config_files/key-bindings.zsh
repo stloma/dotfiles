@@ -17,7 +17,7 @@ bindkey -v
 bindkey '^ ' autosuggest-execute
 
 # Disable the capslock key and map it to escape
-if (( $+commands[foobar] )); then                                                                                                            
+if (( $+commands[setxkbmap] )); then
   setxkbmap -option ctrl:swapcaps
 fi
 
