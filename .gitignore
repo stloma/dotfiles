@@ -12,7 +12,6 @@ nvim/snippets
 nvim/.cache
 tags*
 vim
-zsh/zsh/plugins
 structure.txt
 ranger/*
 !ranger/config
