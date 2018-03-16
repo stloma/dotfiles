@@ -5,14 +5,16 @@ alias hinfo='history -iD'
 alias vim='nvim'
 alias nv='nvim'
 alias init.vim='nvim ~/.config/nvim/init.vim'
-alias .tmux.conf='nvim ~/.tmux.conf'
-alias .zshrc='nvim ~/.zshrc'
-alias sourcezshrc='source ~/.zshrc'
-alias node='node --version && node'
 
 alias trash='tree ~/.local/share/Trash'
-#alias mutt='mutt -F ~/.config/mutt/.muttrc'
+
+mkcd () {
+  mkdir -p "$*"
+  cd "$*"
+}
+
 #
+# Git
 alias gst='git status -s'
 alias gaa='git add -A'
 alias glol='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
@@ -25,11 +27,6 @@ alias glbr='git branch --all'
 alias galias='cat ~/.zsh/config_files/aliases.zsh |g git |g -v galias'
 alias trw='tmux renamew'
 alias lal='ls -a -l'
-
-mkcd () {
-  mkdir -p "$*"
-  cd "$*"
-}
 
 if [[ $(uname -s) == Linux ]]; then
   alias l='ls -F --color=auto'
