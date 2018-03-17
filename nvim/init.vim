@@ -167,9 +167,9 @@ imap <C-X> <del>
 
 nnoremap <leader>r :w <CR> :! browser-sync reload<CR><CR>
 
-" map <F8> :w <CR> :!clear && clang % && ./a.out <CR>
-" nnoremap <F8> :w <CR> :te python3.5 ./% <CR>
+autocmd FileType python nnoremap <F8> :exec '!python3.5' shellescape(@%, 1)<cr>
 autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
+autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
 
 nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
