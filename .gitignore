@@ -10,6 +10,7 @@ nvim/plugin
 nvim/repos
 nvim/snippets
 nvim/.cache
+nvim/dbext.conf
 tags*
 vim
 structure.txt

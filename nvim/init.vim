@@ -93,6 +93,8 @@ let g:NERDTreeIndicatorMapCustom = {
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+source ~/.config/nvim/dbext.conf
+
 function! DBextPostResult(db_type, buf_nr)
 	" If dealing with a Postgres database
 	if a:db_type == 'PGSQL'
