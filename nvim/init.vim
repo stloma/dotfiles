@@ -5,6 +5,8 @@ set rtp+=$HOME/.config/vundle/Vundle.vim
 call vundle#begin('$HOME/.config/vundle/')
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-scripts/dbext.vim'
+Plugin 'krisajenkins/vim-postgresql-syntax'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -90,6 +92,13 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+function! DBextPostResult(db_type, buf_nr)
+	" If dealing with a Postgres database
+	if a:db_type == 'PGSQL'
+		set filetype=postgresql
+	endif
+endfunction
 
 set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
