@@ -7,6 +7,7 @@ wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Inconso
 unzip ~/.fonts/Inconsolata.zip -d ~/.fonts
 
 ln -s $PWD/vim/vimrc ~/.vimrc
+ln -s $PWD/psql/psqlrc ~/.psqlrc
 ln -s $PWD/vim/vim ~/.vim
 ln -s $PWD/zsh/zsh ~/.zsh
 ln -s $PWD/zsh/zshrc ~/.zshrc
