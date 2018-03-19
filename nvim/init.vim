@@ -79,27 +79,27 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+      \ "Modified"  : "✹",
+      \ "Staged"    : "✚",
+      \ "Untracked" : "✭",
+      \ "Renamed"   : "➜",
+      \ "Unmerged"  : "═",
+      \ "Deleted"   : "✖",
+      \ "Dirty"     : "✗",
+      \ "Clean"     : "✔︎",
+      \ 'Ignored'   : '☒',
+      \ "Unknown"   : "?"
+      \ }
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 source ~/.config/nvim/dbext.conf
 
 function! DBextPostResult(db_type, buf_nr)
-	" If dealing with a Postgres database
-	if a:db_type == 'PGSQL'
-		set filetype=postgresql
-	endif
+  " If dealing with a Postgres database
+  if a:db_type == 'PGSQL'
+    set filetype=postgresql
+  endif
 endfunction
 
 set statusline+=%{fugitive#statusline()}
@@ -120,6 +120,8 @@ let g:airline_powerline_fonts = 1
 execute "highlight ALEErrorSign guifg=#c94922 guibg=#293256"
 
 highlight CursorLineNr guifg=#ac9739
+autocmd BufWinEnter * match TrailingWhiteSpace /\s\+$/
+highlight TrailingWhiteSpace guibg=#782b14
 
 "
 " Keybindings
