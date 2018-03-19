@@ -26,6 +26,20 @@ alias vhalt='vagrant halt'
 alias vreload='vagrant reload'
 
 #
+# Docker
+alias drm='docker rm'
+alias drmimage='docker rmi'
+alias dimages='docker images'
+alias drun='docker run'
+alias drunit='docker run -it'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dinspect='docker inspect'
+alias dtop='docker top'
+alias dstop='docker stop'
+alias dstats='docker stats'
+
+#
 # Git
 alias gst='git status -s'
 alias gaa='git add -A'
