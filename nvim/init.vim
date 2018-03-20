@@ -179,7 +179,7 @@ noremap <space> za
 noremap zA zR
 noremap zC zM
 nnoremap <leader>w :w<CR>
-nnoremap <leader>s :nohls <CR>
+nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
