@@ -23,7 +23,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
