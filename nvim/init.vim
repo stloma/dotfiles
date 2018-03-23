@@ -23,6 +23,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
