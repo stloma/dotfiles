@@ -60,8 +60,8 @@ set path+=**
 set wildmenu
 set encoding=utf-8
 " folding, first two load/save on open/exit
-autocmd BufWinLeave * mkview
-autocmd BufWinEnter * silent loadview
+autocmd BufWinLeave ?* mkview 1
+autocmd BufWinEnter ?* silent loadview 1
 set foldlevel=99
 highlight Search guibg=#782b14 guifg=#de917a
 highlight IncSearch guibg=#782b14 guifg=#de917a
