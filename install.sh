@@ -16,5 +16,7 @@ ln -s $PWD/tmux/plugins ~/.config/tmux
 ln -s $PWD/nvim ~/.config/nvim
 ln -s $PWD/ranger/config ~/.config/ranger
 
+echo '.pytest_cache/' > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 touch ~/.config/nvim/dbext.conf
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/vundle/Vundle.vim
