@@ -14,6 +14,15 @@ mkcd () {
 }
 
 #
+# Kinto
+alias kflush='http POST "127.0.0.1:8888/v1/__flush__" --verbose'
+alias kperms='http -b 127.0.0.1:8888/v1/permissions'
+
+kput () {
+  http -b put 127.0.0.1:8888/v1/buckets/"$*"
+}
+
+#
 # Vagrant
 alias vup='vagrant up'
 alias vlist='vagrant box list'
