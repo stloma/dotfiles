@@ -8,8 +8,6 @@ function get_pwd(){
   if [[ $git_root = / ]]; then
     unset git_root
     prompt_short_dir=%~
-elif [[ $git_root == /home/lockwood ]]; then
-    prompt_short_dir=%~
   else
     parent=${git_root%\/*}
     prompt_short_dir=${PWD#$parent/}
