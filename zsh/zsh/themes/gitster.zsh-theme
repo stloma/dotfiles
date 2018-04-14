@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg[yellow]%}≻ :%{$fg_bold[red]%}≻ %s)"
+local ret_status="%(?:%{$fg_bold[black]%} :%{$fg_no_bold[red]%} %s)"
 
 function get_pwd(){
   git_root=$PWD
@@ -17,17 +17,18 @@ elif [[ $git_root == /home/lockwood ]]; then
   echo $prompt_short_dir
 }
 
-
 function prompt_context() {
   if [[ -n "$SSH_CLIENT" || $UID == 0 ]]; then
     echo "%{$fg[red]%}$USER@%m:"
   fi
 }
 
-PROMPT='$(prompt_context)%{$fg[magenta]%}$(get_pwd) $ret_status%{$reset_color%}$(git_prompt_info)%{$reset_color%} '
+# precmd() { print "" }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}"
+PROMPT='$(prompt_context)%{$fg_bold[magenta]%}$(get_pwd) $ret_status%{$reset_color%}$(git_prompt_info)%{$reset_color%} '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[016]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}⊁%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[022]%}≻%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_no_bold[red]%}%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[247]%}%{$reset_color%} "
