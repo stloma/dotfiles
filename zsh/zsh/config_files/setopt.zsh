@@ -8,3 +8,6 @@ setopt NOFLOWCONTROL
 setopt AUTO_MENU
 setopt menu_complete  #select menu on first tab
 setopt interactivecomments #Allows comments on cmdline
+setopt auto_cd
+setopt multios
+setopt cdablevars
