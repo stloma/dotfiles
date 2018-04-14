@@ -19,7 +19,7 @@ function prompt_context() {
   if [[ -n "$SSH_CLIENT" ]]; then
     echo "%{$fg[red]%}$USER@%m:"
   elif [[ $UID == 0 ]]; then
-    echo "%{$fg[red]%}root"
+    echo "%{$fg[red]%}root  "
   fi
 }
 
