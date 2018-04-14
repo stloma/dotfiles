@@ -18,8 +18,10 @@ elif [[ $git_root == /home/lockwood ]]; then
 }
 
 function prompt_context() {
-  if [[ -n "$SSH_CLIENT" || $UID == 0 ]]; then
+  if [[ -n "$SSH_CLIENT" ]]; then
     echo "%{$fg[red]%}$USER@%m:"
+  elif [[ $UID == 0 ]]; then
+    echo "%{$fg[red]%}root"
   fi
 }
 
