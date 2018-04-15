@@ -14,7 +14,3 @@ nvim/dbext.conf
 tags*
 vim
 structure.txt
-ranger/*
-!ranger/config
-ranger/config/*
-!ranger/config/rc.conf
