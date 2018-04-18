@@ -1,5 +1,5 @@
 if [[ $(uname -s) == Linux ]]; then
-    export EDITOR="/usr/bin/vim"
+    export EDITOR="/usr/bin/nvim"
 fi
 if [[ $(uname -s) == FreeBSD ]]; then
     export EDITOR="/usr/local/bin/vim"
