@@ -191,3 +191,16 @@ nnoremap + j$
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map <leader>b :b#<cr>
 map <leader>q :bd<cr>
+
+let g:clipboard = {
+  \   'name': 'xclip-xfce4-clipman',
+  \   'copy': {
+  \      '+': 'xclip -selection clipboard',
+  \      '*': 'xclip -selection clipboard',
+  \    },
+  \   'paste': {
+  \      '+': 'xclip -selection clipboard -o',
+  \      '*': 'xclip -selection clipboard -o',
+  \   },
+  \   'cache_enabled': 1,
+  \ }
