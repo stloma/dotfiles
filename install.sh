@@ -3,7 +3,7 @@ mkdir -p ~/.config/vundle
 mkdir -p ~/.config/tmux
 mkdir ~/.fonts
 
-#wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Inconsolata.zip -P ~/.fonts
+#wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Inconsolata.zip ~/.fonts
 #unzip ~/.fonts/Inconsolata.zip -d ~/.fonts
 
 ln -s $PWD/vim/vimrc ~/.vimrc
