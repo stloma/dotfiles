@@ -6,9 +6,7 @@ mkdir ~/.fonts
 #wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Inconsolata.zip ~/.fonts
 #unzip ~/.fonts/Inconsolata.zip -d ~/.fonts
 
-ln -s $PWD/vim/vimrc ~/.vimrc
 ln -s $PWD/psql/psqlrc ~/.psqlrc
-ln -s $PWD/vim/vim ~/.vim
 ln -s $PWD/zsh/zsh ~/.zsh
 ln -s $PWD/zsh/zshrc ~/.zshrc
 ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
