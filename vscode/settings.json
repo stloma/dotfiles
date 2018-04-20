@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "Material Theme",
+    "editor.fontFamily": "Inconsolata",
+    "editor.fontSize": 16,
+    "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "red",
+    "vim.easymotionMarkerFontWeight": "bold",
+    "vim.easymotionMarkerFontFamily": "Inconsolata",
+    "vim.easymotionMarkerHeight": 18,
+    "vim.easymotionMarkerWidthPerChar": 12,
+    "vim.easymotionMarkerYOffset": -5,
+    "vim.easymotionMarkerForegroundColorOneChar": "red",
+    "vim.easymotionMarkerFontSize": "18",
+    "vim.leader": ","
+}
