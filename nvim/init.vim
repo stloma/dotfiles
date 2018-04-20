@@ -192,6 +192,10 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 map <leader>b :b#<cr>
 map <leader>q :bd<cr>
 
+":Prep \Cpermissions => case sensitive search for permissions
+command! -nargs=1 Pgrep vimgrep "<args>" $PWD/**/*.py
+nnoremap <leader>P :Pgrep
+
 let g:clipboard = {
   \   'name': 'xclip-xfce4-clipman',
   \   'copy': {
