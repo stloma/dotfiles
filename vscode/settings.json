@@ -11,5 +11,6 @@
     "vim.easymotionMarkerYOffset": -5,
     "vim.easymotionMarkerForegroundColorOneChar": "red",
     "vim.easymotionMarkerFontSize": "18",
-    "vim.leader": ","
+    "vim.leader": ",",
+    "window.zoomLevel": 0
 }
