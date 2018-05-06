@@ -1,0 +1,13 @@
+let mapleader=","
+
+map <C-f> :action AceAction<CR>
+map <C-j> :action AceLineAction<CR>
+map <C-k> :action AceLineAction<CR>
+
+nmap <leader>b :action Back<cr>
+nmap <leader>f :action Forward<cr>
+nmap <leader>g :action GotoDeclaration<cr>
+
+set clipboard=xclip-xfce4-clipman
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
