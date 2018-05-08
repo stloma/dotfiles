@@ -11,3 +11,7 @@ nmap <leader>g :action GotoDeclaration<cr>
 set clipboard=xclip-xfce4-clipman
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
+
+nnoremap <leader>l :action ReformatCode<CR>
+
+set hls
