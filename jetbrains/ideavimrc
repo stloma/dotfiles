@@ -1,6 +1,6 @@
 let mapleader=","
 
-map <C-f> :action AceAction<CR>
+map <leader><f> :action AceAction<CR>
 map <C-j> :action AceLineAction<CR>
 map <C-k> :action AceLineAction<CR>
 
@@ -13,5 +13,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 nnoremap <leader>l :action ReformatCode<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader><CR> :nohlsearch<CR>
 
 set hls
