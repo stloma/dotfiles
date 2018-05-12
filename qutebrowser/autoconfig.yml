@@ -161,5 +161,6 @@ settings:
       az: https://www.amazon.com/s?url=search-alias%3Daps&field-keywords={}
       go: https://www.google.com/search?hl=en&q={}
       rd: https://www.reddit.com/r/{}
+      yt: https://www.youtube.com/results?search_query={}
   zoom.default:
     global: 160%
