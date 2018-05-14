@@ -54,12 +54,26 @@ settings:
     global: '#f5f6f7'
   colors.statusbar.command.fg:
     global: '#414a59'
-  colors.statusbar.normal.bg:
+  colors.statusbar.command.private.bg:
+    global: '#cc575d'
+  colors.statusbar.command.private.fg:
     global: '#f5f6f7'
-  colors.statusbar.normal.fg:
-    global: '#414a59'
-  colors.statusbar.url.success.https.fg:
+  colors.statusbar.insert.bg:
     global: '#5294e2'
+  colors.statusbar.insert.fg:
+    global: '#f5f6f7'
+  colors.statusbar.normal.bg:
+    global: '#303642'
+  colors.statusbar.normal.fg:
+    global: '#f5f6f7'
+  colors.statusbar.private.bg:
+    global: '#cc575d'
+  colors.statusbar.private.fg:
+    global: '#f5f6f7'
+  colors.statusbar.url.success.http.fg:
+    global: '#cc575d'
+  colors.statusbar.url.success.https.fg:
+    global: '#cc575d'
   colors.tabs.bar.bg:
     global: '#555555'
   colors.tabs.even.bg:
