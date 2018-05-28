@@ -40,7 +40,8 @@ syntax on
 set relativenumber
 set number
 let loaded_matchparen = 1
-set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+set list
+set listchars=tab:▸\ ,trail:\ ,eol:¬
 set hidden
 " Sets number of lines above and below cursor
 set scrolloff=7
@@ -120,8 +121,9 @@ let g:airline_powerline_fonts = 1
 execute "highlight ALEErrorSign guifg=#c94922 guibg=#293256"
 
 highlight CursorLineNr guifg=#ac9739
-autocmd BufWinEnter * match TrailingWhiteSpace /\s\+$/
-highlight TrailingWhiteSpace guibg=#782b14
+
+"  Whitespace highlights for nbsp, space, tab and trail
+highlight Whitespace guibg=#782b14
 
 "
 " Keybindings
