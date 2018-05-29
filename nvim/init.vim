@@ -185,6 +185,9 @@ nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
+nnoremap <leader>eo :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p')) '&& qpdfview' fnameescape(expand('%:p:r')) . '.pdf '<cr>
+nnoremap <leader>es :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p'))<cr>
+
 inoremap <leader>{  {<CR>}<Esc>O
 
 nnoremap + j$
