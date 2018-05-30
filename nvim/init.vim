@@ -175,6 +175,9 @@ autocmd FileType python nnoremap <F8> :w<CR> :exec '!/usr/bin/env python3' shell
 autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
 autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
 autocmd FileType sql vnoremap <F8> :DBExecRangeSQL<cr>
+autocmd FileType markdown nnoremap <F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p')) '&& qpdfview' fnameescape(expand('%:p:r')) . '.pdf '<cr>
+autocmd FileType markdown nnoremap <leader><F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p'))<cr>
+
 
 nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
@@ -184,9 +187,6 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
-
-nnoremap <leader>eo :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p')) '&& qpdfview' fnameescape(expand('%:p:r')) . '.pdf '<cr>
-nnoremap <leader>es :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p'))<cr>
 
 inoremap <leader>{  {<CR>}<Esc>O
 
