@@ -139,7 +139,7 @@ nmap <leader>l <Plug>(ale_fix)
 nmap <M-k> <Plug>(ale_previous_wrap)
 nmap <M-j> <Plug>(ale_next_wrap)
 
-map <leader>f <Plug>(easymotion-bd-f)
+map <C-f> <Plug>(easymotion-bd-f)
 map <C-j> <Plug>(easymotion-j)
 map <C-k> <Plug>(easymotion-k)
 
