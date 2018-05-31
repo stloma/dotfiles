@@ -41,7 +41,7 @@ set relativenumber
 set number
 let loaded_matchparen = 1
 set list
-set listchars=tab:▸\ ,trail:\ ,eol:¬
+set listchars=tab:▸\ ,trail:\ ,
 set hidden
 " Sets number of lines above and below cursor
 set scrolloff=7
@@ -62,10 +62,11 @@ set wildmenu
 set encoding=utf-8
 " folding, first two load/save on open/exit
 autocmd BufWinLeave ?* mkview 1
-autocmd BufWinEnter ?* silent loadview 1
+autocmd BufWinEnter ?* silent! loadview 1
 set foldlevel=99
 highlight Search guibg=#782b14 guifg=#de917a
 highlight IncSearch guibg=#782b14 guifg=#de917a
+highlight markdownCodeBlock none
 
 "
 " Plugin Customization
@@ -175,7 +176,9 @@ autocmd FileType python nnoremap <F8> :w<CR> :exec '!/usr/bin/env python3' shell
 autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
 autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
 autocmd FileType sql vnoremap <F8> :DBExecRangeSQL<cr>
-autocmd FileType markdown nnoremap <F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p')) '&& qpdfview' fnameescape(expand('%:p:r')) . '.pdf '<cr>
+
+" https://www.reddit.com/r/vim/comments/49ven4/how_do_i_actually_run_something_in_the_background/
+autocmd FileType markdown nnoremap <F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p')) '&& qpdfview' fnameescape(expand('%:p:r')) . '.pdf ' <cr>
 autocmd FileType markdown nnoremap <leader><F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p'))<cr>
 
 
