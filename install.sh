@@ -13,6 +13,7 @@ ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
 ln -s $PWD/tmux/plugins ~/.config/tmux
 ln -s $PWD/nvim ~/.config/nvim
 ln -s $PWD/ranger/config ~/.config/ranger
+ln -s $PWD/rofi ~/.config/rofi
 
 echo '.pytest_cache/' > ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global

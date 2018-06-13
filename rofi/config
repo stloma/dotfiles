@@ -1,0 +1,12 @@
+rofi.lines: 8
+! rofi.width: 100
+rofi.font:          hack 18
+rofi.modi: window,run
+rofi.case-sensitive: false
+! rofi.eh: 9
+rofi.hide-scrollbar: false
+rofi.opacity:       85
+rofi.seperator-style: none
+
+rofi.spacing:       10
+rofi.theme: /usr/share/rofi/themes/glue_pro_blue.rasi
