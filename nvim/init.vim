@@ -130,6 +130,7 @@ highlight Whitespace guibg=#782b14
 " Keybindings
 "
 let mapleader=","
+noremap \ ,
 
 " plugins
 map <C-n> :NERDTreeToggle<CR>
