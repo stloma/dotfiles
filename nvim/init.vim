@@ -178,10 +178,32 @@ autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '
 autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
 autocmd FileType sql vnoremap <F8> :DBExecRangeSQL<cr>
 
-" https://www.reddit.com/r/vim/comments/49ven4/how_do_i_actually_run_something_in_the_background/
-autocmd FileType markdown nnoremap <F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p')) '&& qpdfview' fnameescape(expand('%:p:r')) . '.pdf ' <cr>
-autocmd FileType markdown nnoremap <leader><F8> :w!<cr>:exe "!pandoc --from markdown --template ~/.config/pandoc/eisvogel.tex --listings -o " . fnameescape(expand('%:p:r')) . ".pdf " . fnameescape(expand('%:p'))<cr>
+autocmd FileType markdown nnoremap <F8> :call MarkdownToPdf()<cr>
+autocmd FileType markdown imap <leader><leader><space> $\Rightarrow$ 
 
+function! MarkdownToPdf()
+  let l:out = '/src/out'
+  let l:in = '/src/in'
+
+  let l:templatename = 'eisvogel.tex'
+  let l:templatedir = l:in . "/" . l:templatename
+  let l:filename = l:out . "/" . fnameescape(expand('%:'))
+  let l:pdfout = l:out . "/" . fnameescape(expand('%:r')) . ".pdf"
+  let l:pdfname = fnameescape(expand('%:r')) . ".pdf"
+  let l:containername = 'arch-pandoc'
+
+  let l:pwd = fnameescape(expand('%:p:h'))
+  let l:outvol = fnameescape(expand('%:p:h')) . ":/src/out"
+  let l:invol = "/home/lockwood/.config/pandoc:/src/in"
+
+  execute "!docker run
+        \ -v" l:outvol"
+        \ -v" l:invol"
+        \ " l:containername "
+        \ --from markdown --template" l:templatedir"
+        \ --listings -o" l:pdfout l:filename
+  execute "!qpdfview" l:pdfname
+endfunction
 
 nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
