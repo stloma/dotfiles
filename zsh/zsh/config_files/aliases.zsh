@@ -61,6 +61,7 @@ alias glog='git log --oneline'
 alias glbr='git branch --all'
 alias galias='cat ~/.zsh/config_files/aliases.zsh |g git |g -v galias'
 alias trw='tmux renamew'
+alias trn='tmux movew -r'
 alias lal='ls -a -l'
 
 if [[ $(uname -s) == Linux ]]; then
