@@ -196,7 +196,7 @@ function! MarkdownToPdf()
   let l:outvol = fnameescape(expand('%:p:h')) . ":/src/out"
   let l:invol = "/home/lockwood/.config/pandoc:/src/in"
 
-  execute "!docker run
+  execute "!docker run --rm
         \ -v" l:outvol"
         \ -v" l:invol"
         \ " l:containername "
