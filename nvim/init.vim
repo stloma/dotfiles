@@ -187,9 +187,9 @@ function! MarkdownToPdf()
 
   let l:templatename = 'eisvogel.tex'
   let l:templatedir = l:in . "/" . l:templatename
-  let l:filename = l:out . "/" . fnameescape(expand('%:'))
-  let l:pdfout = l:out . "/" . fnameescape(expand('%:r')) . ".pdf"
-  let l:pdfname = fnameescape(expand('%:r')) . ".pdf"
+  let l:filename = l:out . "/" . fnameescape(expand('%:t'))
+  let l:pdfout = l:out . "/" . fnameescape(expand('%:t:r')) . ".pdf"
+  let l:pdfname = fnameescape(expand('%:p:r')) . ".pdf"
   let l:containername = 'arch-pandoc'
 
   let l:pwd = fnameescape(expand('%:p:h'))
