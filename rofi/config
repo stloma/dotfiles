@@ -1,11 +1,4 @@
-rofi.lines: 8
-rofi.width: 20
-rofi.padding: 3
-
-rofi.font:          hack 20
-rofi.modi: window,run
-rofi.case-sensitive: false
-rofi.opacity:       85
+rofi.font:          hack 25
 rofi.show-icons: true
 
 rofi.theme: ~/.config/rofi/glue_pro_blue.rasi
