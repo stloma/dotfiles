@@ -69,7 +69,7 @@ if [[ $(uname -s) == Linux ]]; then
   alias l='ls -F --color=auto'
   alias ll='ls -lF --color=auto'
   alias la='ls -AF --color=auto'
-  alias g='grep -i --color=auto'
+  alias g='grep -iI --color=auto'
   if [[ $(lsb_release -a 2> /dev/null |awk '{ if ($1 == "Release:" ) print $2 }') == 16.04 ]]; then
     alias tmux='tmux-next'
   else
