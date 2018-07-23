@@ -16,11 +16,6 @@ bindkey -v
 
 bindkey '^ ' autosuggest-execute
 
-# Disable the capslock key and map it to escape
-if (( $+commands[setxkbmap] )); then
-  setxkbmap -option ctrl:swapcaps
-fi
-
 #use alt+1, alt+2, etc, to bring up history
 bindkey -s '^[1' "!:0 \t"
 bindkey -s '^[2' "!:1 \t"
