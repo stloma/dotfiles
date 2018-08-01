@@ -6,6 +6,8 @@ alias vim='nvim'
 alias nv='nvim'
 alias init.vim='nvim ~/.config/nvim/init.vim'
 
+alias b2='backblaze-b2'
+
 alias trash='tree ~/.local/share/Trash'
 
 mkcd () {
