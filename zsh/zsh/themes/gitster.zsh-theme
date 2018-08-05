@@ -17,7 +17,11 @@ function get_pwd(){
 
 function prompt_context() {
   if [[ -n "$SSH_CLIENT" ]]; then
-    echo "%{$fg[red]%}$USER@%m:"
+    if [[ $UID == 0 ]]; then
+        echo "%{$fg[red]%}root@%m:"
+    else
+      echo "%{$fg[red]%}$USER@%m:"
+    fi
   elif [[ $UID == 0 ]]; then
     echo "%{$fg[red]%}root  "
   fi
