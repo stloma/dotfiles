@@ -5,6 +5,7 @@ alias hinfo='history -iD'
 alias vim='nvim'
 alias nv='nvim'
 alias init.vim='nvim ~/.config/nvim/init.vim'
+alias tree='tree -C'
 
 alias b2='backblaze-b2'
 
