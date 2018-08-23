@@ -174,6 +174,30 @@ imap <C-X> <del>
 
 nnoremap <leader>r :w <CR> :! browser-sync reload<CR><CR>
 
+nnoremap <leader>rc :source $MYVIMRC<CR>
+noremap <space> za
+noremap zA zR
+noremap zC zM
+nnoremap <leader>w :w<CR>
+nnoremap <leader><CR> :noh<CR>
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+
+inoremap <leader>{  {<CR>}<Esc>O
+
+nnoremap + j$
+
+" buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
+map <leader>b :b#<cr>
+map <leader>q :bd<cr>
+
+":Prep \Cpermissions => case sensitive search for permissions
+command! -nargs=1 Pgrep vimgrep "<args>" $PWD/**/*.py
+nnoremap <leader>P :Pgrep
+
+" filetype specific
+
 autocmd FileType python nnoremap <F8> :w<CR> :exec '!/usr/bin/env python3' shellescape(@%, 1)<cr>
 autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
 autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
@@ -206,28 +230,6 @@ function! MarkdownToPdf()
         \ --listings -o" l:pdfout l:filename
   execute "!qpdfview" l:pdfname
 endfunction
-
-nnoremap <leader>rc :source $MYVIMRC<CR>
-noremap <space> za
-noremap zA zR
-noremap zC zM
-nnoremap <leader>w :w<CR>
-nnoremap <leader><CR> :noh<CR>
-vnoremap <leader>y "+y
-nnoremap <leader>p "+p
-
-inoremap <leader>{  {<CR>}<Esc>O
-
-nnoremap + j$
-
-" buffers
-nnoremap <F5> :buffers<CR>:buffer<Space>
-map <leader>b :b#<cr>
-map <leader>q :bd<cr>
-
-":Prep \Cpermissions => case sensitive search for permissions
-command! -nargs=1 Pgrep vimgrep "<args>" $PWD/**/*.py
-nnoremap <leader>P :Pgrep
 
 let g:clipboard = {
   \   'name': 'xclip-xfce4-clipman',
