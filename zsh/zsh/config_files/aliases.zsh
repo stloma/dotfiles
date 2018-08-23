@@ -8,7 +8,12 @@ alias init.vim='nvim ~/.config/nvim/init.vim'
 alias tree='tree -C'
 
 alias b2='backblaze-b2'
-alias xc='xclip -selection clipboard'
+
+pw () {
+  pass=$(bw get password "$*")
+  echo $pass | tr -d '\n' | xclip -selection clipboard
+  echo "Copied to clipboard"
+}
 
 alias trash='tree ~/.local/share/Trash'
 
