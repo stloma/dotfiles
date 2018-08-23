@@ -8,6 +8,7 @@ alias init.vim='nvim ~/.config/nvim/init.vim'
 alias tree='tree -C'
 
 alias b2='backblaze-b2'
+alias xc='xclip -selection clipboard'
 
 alias trash='tree ~/.local/share/Trash'
 
