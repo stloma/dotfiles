@@ -1,7 +1,17 @@
+# shell
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias h='history 1 |g '
 alias hinfo='history -iD'
+alias lal='ls -a -l'
+
+mkcd () {
+  mkdir -p "$*"
+  cd "$*"
+}
+
+# apps
+
 alias vim='nvim'
 alias nv='nvim'
 alias init.vim='nvim ~/.config/nvim/init.vim'
@@ -17,13 +27,7 @@ pw () {
 
 alias trash='tree ~/.local/share/Trash'
 
-mkcd () {
-  mkdir -p "$*"
-  cd "$*"
-}
-
-#
-# Kinto
+# kinto
 alias kflush='http POST "127.0.0.1:8888/v1/__flush__" --verbose'
 alias kperms='http -b 127.0.0.1:8888/v1/permissions'
 
@@ -31,8 +35,7 @@ kput () {
   http -b put 127.0.0.1:8888/v1/buckets/"$*"
 }
 
-#
-# Vagrant
+# vagrant
 alias vup='vagrant up'
 alias vlist='vagrant box list'
 alias vssh='vagrant ssh'
@@ -43,8 +46,7 @@ alias vpack='vagrant package'
 alias vhalt='vagrant halt'
 alias vreload='vagrant reload'
 
-#
-# Docker
+# docker
 alias drm='docker rm'
 alias drmimage='docker rmi'
 alias dimages='docker images'
@@ -57,8 +59,7 @@ alias dtop='docker top'
 alias dstop='docker stop'
 alias dstats='docker stats'
 
-#
-# Git
+# git
 alias gst='git status -s'
 alias gaa='git add -A'
 alias glol='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
@@ -70,10 +71,12 @@ alias glog='git log --oneline'
 alias glbr='git branch --all'
 alias gsc='git config --local --list'
 alias galias='cat ~/.zsh/config_files/aliases.zsh |g git |g -v galias'
+
+# tmux
 alias trw='tmux renamew'
 alias trn='tmux movew -r'
-alias lal='ls -a -l'
 
+# conditionals
 if [[ $(uname -s) == Linux ]]; then
   alias l='ls -F --group-directories-first --color=auto'
   alias ll='ls -lF --group-directories-first --color=auto'
