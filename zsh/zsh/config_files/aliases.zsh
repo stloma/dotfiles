@@ -28,6 +28,14 @@ alias b2='backblaze-b2'
 
 pw () {
   pass=$(bw get password "$*")
+
+  if [[ $pass == "Vault is locked." ]] ||
+     [[ $pass == "You are not logged in." ]] ||
+     [[ $pass == "Not found." ]] ||; then
+      echo $pass
+      return 1
+  fi
+
   echo $pass | xclip -selection clipboard
   echo "Copied to clipboard"
 }
