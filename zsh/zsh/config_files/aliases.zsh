@@ -13,7 +13,9 @@ mkcd () {
 # system
 
 alias sc='systemctl'
+alias scu='systemctl --user'
 alias jc='journalctl'
+alias jcu='journalctl --user'
 
 # apps
 
