@@ -28,7 +28,7 @@ alias b2='backblaze-b2'
 
 pw () {
   pass=$(bw get password "$*")
-  echo $pass | tr -d '\n' | xclip -selection clipboard
+  echo $pass | xclip -selection clipboard
   echo "Copied to clipboard"
 }
 
