@@ -10,6 +10,11 @@ mkcd () {
   cd "$*"
 }
 
+# system
+
+alias sc='systemctl'
+alias jc='journalctl'
+
 # apps
 
 alias vim='nvim'
