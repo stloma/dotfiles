@@ -37,6 +37,10 @@ if [[ $(echo $TTY) =~ pts ]]; then
   ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 fi
 
+if [[ $(tty) = /dev/tty1 ]]; then
+  exec startx
+fi
+
 #ENABLE_CORRECTION="true"
 #
 export TERM='xterm-256color'
