@@ -28,6 +28,7 @@ if [[ $(echo $TTY) =~ pts ]]; then
   source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
   source $ppath/z/z.sh
   source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+  source $ppath/zsh-vimode-visual/zsh-vimode-visual.zsh
 
   # Disable the capslock key and map it to escape
   if (( $+commands[setxkbmap] )); then
