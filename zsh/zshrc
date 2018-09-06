@@ -30,7 +30,7 @@ if [[ $(echo $TTY) =~ pts ]]; then
   source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
   source $ppath/zsh-vimode-visual/zsh-vimode-visual.zsh
 
-  # Disable the capslock key and map it to escape
+  # Swap ctrl and caps if setxkbmap exists
   if (( $+commands[setxkbmap] )); then
     setxkbmap -option ctrl:swapcaps
   fi
