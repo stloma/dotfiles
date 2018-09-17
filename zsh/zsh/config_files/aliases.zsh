@@ -86,6 +86,8 @@ alias glog='git log --oneline'
 alias glbr='git branch --all'
 alias gsc='git config --local --list'
 alias galias='cat ~/.zsh/config_files/aliases.zsh |g git |g -v galias'
+alias gl='git log --oneline -n 10'
+alias gd='git diff'
 
 # tmux
 alias trw='tmux renamew'
