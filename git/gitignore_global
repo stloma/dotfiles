@@ -1,0 +1,7 @@
+.pytest_cache/
+tags
+.vscode
+.venv
+*.pyc
+__pycache__
+.idea
