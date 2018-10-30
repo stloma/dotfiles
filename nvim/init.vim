@@ -205,7 +205,7 @@ autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
 autocmd FileType sql vnoremap <F8> :DBExecRangeSQL<cr>
 
 autocmd FileType markdown nnoremap <F8> :call MarkdownToPdf()<cr>
-autocmd FileType markdown imap <leader><leader><space> $\Rightarrow$ 
+autocmd FileType markdown imap <leader><leader><space> $\Rightarrow$
 autocmd FileType markdown imap <leader><leader>l \begin{center}\rule{0.9\textwidth}{.4pt}\end{center}<ESC>F9
 
 function! MarkdownToPdf()
