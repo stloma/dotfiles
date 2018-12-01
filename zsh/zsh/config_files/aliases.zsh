@@ -10,6 +10,11 @@ mkcd () {
   cd "$*"
 }
 
+cl () {
+  cd "$*"
+  l
+}
+
 # system
 
 alias sc='systemctl'
