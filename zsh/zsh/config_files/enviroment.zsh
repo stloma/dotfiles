@@ -9,5 +9,6 @@ if [[ $(uname -s) == OpenBSD ]]; then
 fi
 
 export PAGER="less -m"
+export MANPAGER="less -m"
 
 #export LESS="-R"
