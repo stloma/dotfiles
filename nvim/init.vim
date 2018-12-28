@@ -41,7 +41,7 @@ set relativenumber
 set number
 let loaded_matchparen = 1
 set list
-set listchars=tab:▸\ ,trail:\ ,
+set listchars=tab:\ \ ,trail:\ ,
 set hidden
 " Sets number of lines above and below cursor
 set scrolloff=7
