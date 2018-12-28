@@ -110,8 +110,23 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:ale_linters = { 'javascript': ['eslint'], 'scss': ['prettier'], 'python': ['flake8'], 'html': ['tidy'] }
-let g:ale_fixers = { 'javascript': ['prettier'], 'scss': ['prettier'], 'python': ['autopep8'], 'html': ['tidy'], 'java': ['google_java_format'] }
+let g:ale_linters = {
+\ 'c': ['cppcheck'],
+\ 'javascript': ['eslint'],
+\ 'scss': ['prettier'],
+\ 'python': ['flake8'],
+\ 'html': ['tidy'],
+\}
+
+" \ 'c': ['uncrustify'],
+let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'javascript': ['prettier'],
+\ 'scss': ['prettier'],
+\ 'python': ['autopep8'],
+\ 'html': ['tidy'],
+\ 'java': ['google_java_format'],
+\}
 let g:ale_virtualenv_dir_names = ['.venv', '~/.local/bin']
 let g:ale_echo_msg_format = '%s [%linter%]'
 let g:ale_sign_error = '✘'
