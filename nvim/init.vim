@@ -141,7 +141,8 @@ execute "highlight ALEErrorSign guifg=#c94922 guibg=#293256"
 highlight CursorLineNr guifg=#ac9739
 
 "  Whitespace highlights for nbsp, space, tab and trail
-highlight Whitespace guibg=#782b14
+highlight Trail guibg=#782b14
+call matchadd('Trail', '\s\+$', 100)
 
 "
 " Keybindings
