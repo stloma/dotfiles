@@ -215,10 +215,11 @@ nnoremap <leader>P :Pgrep
 
 " filetype specific
 
-autocmd FileType python nnoremap <F8> :w<CR> :exec '!/usr/bin/env python3' shellescape(@%, 1)<cr>
-autocmd FileType java nnoremap <F8> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
-autocmd FileType sql nnoremap <F8> :DBExecSQLUnderCursor<cr>
-autocmd FileType sql vnoremap <F8> :DBExecRangeSQL<cr>
+autocmd FileType python nnoremap <F8> :w<CR>:exec '!/usr/bin/env python3' shellescape(@%, 1)<cr>
+autocmd FileType c nnoremap <F8> :ALEDisable<CR>:w<CR>:exec '!gcc -w % && ./a.out'<CR>
+autocmd FileType java nnoremap <F8>:exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
+autocmd FileType sql nnoremap <F8>:DBExecSQLUnderCursor<cr>
+autocmd FileType sql vnoremap <F8>:DBExecRangeSQL<cr>
 
 autocmd FileType markdown nnoremap <F8> :call MarkdownToPdf()<cr>
 autocmd FileType markdown imap <leader><leader><space> $\Rightarrow$
