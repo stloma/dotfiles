@@ -24,6 +24,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mhinz/vim-grepper'
 
 call vundle#end()
 
