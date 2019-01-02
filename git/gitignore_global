@@ -1,5 +1,5 @@
 .pytest_cache/
-tags
+tags*
 .vscode
 .venv
 *.pyc
