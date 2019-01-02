@@ -165,6 +165,7 @@ map <C-j> <Plug>(easymotion-j)
 map <C-k> <Plug>(easymotion-k)
 
 nnoremap <leader>G :Goyo<CR>
+nnoremap <leader>aw :AirlineToggleWhitespace<CR>
 
 nnoremap <leader>g :GitGutterToggle<CR>
 
