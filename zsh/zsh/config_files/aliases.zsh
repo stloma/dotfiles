@@ -104,11 +104,7 @@ if [[ $(uname -s) == Linux ]]; then
   alias ll='ls -lF --group-directories-first --color=auto'
   alias la='ls -AF --group-directories-first --color=auto'
   alias g='grep -iI --color=auto'
-  if [[ $(lsb_release -a 2> /dev/null |awk '{ if ($1 == "Release:" ) print $2 }') == 16.04 ]]; then
-    alias tmux='tmux-next'
-  else
-    alias tmux='tmux -2'
-  fi
+  alias tmux='tmux -2'
 fi
 if [[ $(uname -s) == FreeBSD ]]; then
   alias lst='ls -tG'
