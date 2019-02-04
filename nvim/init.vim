@@ -203,6 +203,8 @@ nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
+inoremap <C-Space> <Esc>l
+
 inoremap <leader>{  {<CR>}<Esc>O
 
 nnoremap + j$
