@@ -4,6 +4,7 @@ alias ....='cd ../../..'
 alias h='history 1 |g '
 alias hinfo='history -iD'
 alias lal='ls -a -l'
+alias pacsearch='pacman -Q |g '
 
 mkcd () {
   mkdir -p "$*"
