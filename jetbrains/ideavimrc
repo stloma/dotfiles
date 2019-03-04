@@ -1,8 +1,6 @@
 let mapleader=","
 
-map <leader><f> :action AceAction<CR>
-map <C-j> :action AceLineAction<CR>
-map <C-k> :action AceLineAction<CR>
+map <C-f> :action AceJumpChar<CR>
 
 nmap <leader>b :action Back<cr>
 nmap <leader>f :action Forward<cr>

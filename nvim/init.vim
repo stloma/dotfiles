@@ -155,12 +155,7 @@ noremap \ ,
 
 " plugins
 
-" highlight VimwikiHeader1 guifg=#FF0000
-highlight VimwikiHeader2 guifg=#00FF00
-" highlight VimwikiHeader3 guifg=#0000FF
-" highlight VimwikiHeader4 guifg=#FF00FF
-" highlight VimwikiHeader5 guifg=#00FFFF
-" highlight VimwikiHeader6 guifg=#FFFF00
+highlight VimwikiHeader1 guifg=#c08b30
 
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>
@@ -207,7 +202,7 @@ nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
 noremap zA zR
 noremap zC zM
-nnoremap <leader>w :w<CR>
+nnoremap <C-s> :w<CR>
 nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
@@ -264,6 +259,12 @@ function! MarkdownToPdf()
         \ --listings -o" l:pdfout l:filename
   execute "!qpdfview" l:pdfname
 endfunction
+
+
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+let g:vimwiki_list = [wiki]
 
 let g:clipboard = {
   \   'name': 'xclip-xfce4-clipman',
