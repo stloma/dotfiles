@@ -226,7 +226,7 @@ nnoremap <leader>P :Pgrep
 autocmd FileType python nnoremap <F8> :w<CR>:exec '!/usr/bin/env python3' shellescape(@%, 1)<cr>
 autocmd FileType c nnoremap <F8> :ALEDisable<CR>:w<CR>:exec '!gcc -w % && ./a.out'<CR>
 autocmd FileType cpp nnoremap <F8> :w<CR>:exec '!g++ -w % && ./a.out'<CR>
-autocmd FileType java nnoremap <F8>:exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
+autocmd FileType java nnoremap <F8> :w <CR>:exec '!javac % && java' shellescape(expand('%:r'), 1)<cr>
 autocmd FileType sql nnoremap <F8>:DBExecSQLUnderCursor<cr>
 autocmd FileType sql vnoremap <F8>:DBExecRangeSQL<cr>
 
