@@ -134,7 +134,7 @@ let g:ale_echo_msg_format = '%s [%linter%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '!'
 
-let NERDTreeIgnore = [ '\.pyc$', 'cache$', '__pycache__$', 'node_modules$' ]
+let NERDTreeIgnore = [ '\.class', '\.pyc$', 'cache$', '__pycache__$', 'node_modules$' ]
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#hunks#enabled=0
 
