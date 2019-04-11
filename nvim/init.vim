@@ -114,7 +114,7 @@ set statusline+=%*
 
 let g:ale_linters = {
 \ 'c': ['cppcheck'],
-\ 'cpp': ['cppcheck'],
+\ 'cpp': ['clang','cppcheck'],
 \ 'javascript': ['eslint'],
 \ 'scss': ['prettier'],
 \ 'python': ['flake8'],
