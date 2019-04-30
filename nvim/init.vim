@@ -212,6 +212,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 inoremap <C-Space> <Esc>l
+nnoremap <C-i> ^
 inoremap <leader>{  {<CR>}<Esc>O
 
 nnoremap + j$
