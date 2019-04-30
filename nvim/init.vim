@@ -226,50 +226,8 @@ map <leader>q :bd<cr>
 command! -nargs=1 Pgrep vimgrep "<args>" $PWD/**/*.py
 nnoremap <leader>P :Pgrep
 
-" filetype specific
-autocmd FileType python nnoremap <F8> :w<CR>:exec '!/usr/bin/env python3' shellescape(@%, 1)<cr>
-autocmd FileType c nnoremap <F8> :ALEDisable<CR>:w<CR>:exec '!gcc -w % && ./a.out'<CR>
-autocmd FileType cpp nnoremap <F8> :w<CR>:exec '!g++ -w % && ./a.out'<CR>
-autocmd FileType java nnoremap <F8> :w <CR>:exec '!javac % && java' shellescape(expand('%:r'), 1)<cr>
-autocmd FileType sql nnoremap <F8>:DBExecSQLUnderCursor<cr>
-autocmd FileType sql vnoremap <F8>:DBExecRangeSQL<cr>
-
 " Close quickfix
 autocmd FileType qf nnoremap <buffer><silent> <esc> :quit<cr>
-
-autocmd FileType markdown nnoremap <F8> :call MarkdownToPdf()<cr>
-autocmd FileType markdown imap <leader><leader><space> $\Rightarrow$
-autocmd FileType markdown imap <leader><leader>l \begin{center}\rule{0.9\textwidth}{.4pt}\end{center}<ESC>F9
-
-function! MarkdownToPdf()
-  let l:out = '/src/out'
-  let l:in = '/src/in'
-
-  let l:templatename = 'eisvogel.tex'
-  let l:templatedir = l:in . "/" . l:templatename
-  let l:filename = l:out . "/" . fnameescape(expand('%:t'))
-  let l:pdfout = l:out . "/" . fnameescape(expand('%:t:r')) . ".pdf"
-  let l:pdfname = fnameescape(expand('%:p:r')) . ".pdf"
-  let l:containername = 'arch-pandoc'
-
-  let l:pwd = fnameescape(expand('%:p:h'))
-  let l:outvol = fnameescape(expand('%:p:h')) . ":/src/out"
-  let l:invol = "/home/lockwood/.config/pandoc:/src/in"
-
-  execute "!docker run --rm
-        \ -v" l:outvol"
-        \ -v" l:invol"
-        \ " l:containername "
-        \ --from markdown --template" l:templatedir"
-        \ --listings -o" l:pdfout l:filename
-  execute "!qpdfview" l:pdfname
-endfunction
-
-
-let wiki = {}
-let wiki.path = '~/vimwiki/'
-let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
-let g:vimwiki_list = [wiki]
 
 let g:clipboard = {
   \   'name': 'xclip-xfce4-clipman',
