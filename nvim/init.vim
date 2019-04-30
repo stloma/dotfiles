@@ -69,6 +69,7 @@ set foldlevel=99
 highlight Search guibg=#782b14 guifg=#de917a
 highlight IncSearch guibg=#782b14 guifg=#de917a
 highlight markdownCodeBlock none
+highlight SpellBad guifg=#9c637a
 
 "
 " Plugin Customization
@@ -157,6 +158,8 @@ noremap \ ,
 " plugins
 
 highlight VimwikiHeader1 guifg=#c08b30
+" darken code blocks
+highlight VimwikiPre guifg=#5e6687
 
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>
@@ -209,7 +212,6 @@ vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 inoremap <C-Space> <Esc>l
-
 inoremap <leader>{  {<CR>}<Esc>O
 
 nnoremap + j$
