@@ -2,6 +2,9 @@ setlocal shiftwidth=4
 setlocal tabstop=4
 setlocal softtabstop=4
 
+setlocal spell
+highlight SpellBad guifg=#9c637a
+
 nnoremap <F8> :call MarkdownToPdf()<cr>
 imap <leader><leader><space> $\Rightarrow$
 imap <leader><leader>l \begin{center}\rule{0.9\textwidth}{.4pt}\end{center}<ESC>F9

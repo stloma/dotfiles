@@ -69,7 +69,6 @@ set foldlevel=99
 highlight Search guibg=#782b14 guifg=#de917a
 highlight IncSearch guibg=#782b14 guifg=#de917a
 highlight markdownCodeBlock none
-highlight SpellBad guifg=#9c637a
 
 "
 " Plugin Customization
