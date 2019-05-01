@@ -108,19 +108,13 @@ set statusline+=%*
 let g:ale_linters = {
 \ 'c': ['cppcheck'],
 \ 'cpp': ['clang','cppcheck'],
-\ 'javascript': ['eslint'],
-\ 'scss': ['prettier'],
 \ 'python': ['flake8'],
-\ 'html': ['tidy'],
 \}
 
 " \ 'c': ['uncrustify'],
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-\ 'javascript': ['prettier'],
-\ 'scss': ['prettier'],
 \ 'python': ['autopep8'],
-\ 'html': ['tidy'],
 \ 'java': ['google_java_format'],
 \}
 let g:ale_virtualenv_dir_names = ['.venv', '~/.local/bin']
