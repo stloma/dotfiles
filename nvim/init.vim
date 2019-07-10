@@ -142,6 +142,15 @@ noremap \ ,
 
 " plugins
 
+let wiki = {}
+let wiki.path = '~/Dropbox/Notes/vimwiki/home/'
+let wiki.template_path = '~/Dropbox/Notes/vimwiki/templates/'
+let wiki.template_default = 'default'
+let wiki.template_ext = '.html'
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+let g:vimwiki_list = [wiki]
+
+let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'
 
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>

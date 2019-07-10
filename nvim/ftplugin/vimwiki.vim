@@ -1,7 +1,6 @@
-let wiki = {}
-let wiki.path = '~/vimwiki/'
-let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
-let g:vimwiki_list = [wiki]
-
 setlocal spell
+
 highlight SpellBad guifg=#9c637a
+highlight VimwikiHeader1 guifg=#c08b30
+" darken code blocks
+highlight VimwikiPre guifg=#5e6687
