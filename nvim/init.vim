@@ -111,7 +111,6 @@ let g:ale_linters = {
 \ 'python': ['flake8'],
 \}
 
-" \ 'c': ['uncrustify'],
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
 \ 'python': ['autopep8'],
@@ -122,7 +121,7 @@ let g:ale_echo_msg_format = '%s [%linter%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '!'
 
-let NERDTreeIgnore = [ '\.class', '\.pyc$', 'cache$', '__pycache__$', 'node_modules$' ]
+let NERDTreeIgnore = [ 'a.out', '\.class', '\.pyc$', 'cache$', '__pycache__$', 'node_modules$' ]
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#hunks#enabled=0
 
@@ -143,9 +142,6 @@ noremap \ ,
 
 " plugins
 
-highlight VimwikiHeader1 guifg=#c08b30
-" darken code blocks
-highlight VimwikiPre guifg=#5e6687
 
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>
@@ -198,7 +194,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 inoremap <C-Space> <Esc>l
-nnoremap <C-i> ^
+nnoremap <C-i> ^<C-v>
 inoremap <leader>{  {<CR>}<Esc>O
 
 nnoremap + j$
