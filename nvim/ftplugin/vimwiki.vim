@@ -1,4 +1,5 @@
 setlocal spell
+set concealcursor=nc
 
 highlight SpellBad guifg=#9c637a
 highlight VimwikiHeader1 guifg=#c08b30
