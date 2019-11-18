@@ -19,6 +19,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'vhdirk/vim-cmake'
 
 call vundle#end()
 
@@ -211,6 +212,7 @@ nnoremap + j$
 " buffers
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map <leader>b :b#<cr>
+nnoremap <Bs> :b#<cr>
 map <leader>q :bd<cr>
 
 ":Prep \Cpermissions => case sensitive search for permissions
