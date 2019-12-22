@@ -1,17 +1,15 @@
 let mapleader=","
 
-map <C-f> :action AceJumpChar<CR>
+" text mappings
+nnoremap <leader>tc :action emacsIDEAs.AceJump<CR>
+nnoremap <leader>tf :action ReformatCode<CR>
 
-nmap <leader>b :action Back<cr>
-nmap <leader>f :action Forward<cr>
-nmap <leader>g :action GotoDeclaration<cr>
+" file mappings
+nmap <leader>fw :w<CR>
 
-set clipboard=xclip-xfce4-clipman
+" copy/paste
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-nnoremap <leader>l :action ReformatCode<CR>
-nnoremap <leader>w :w<CR>
 nnoremap <leader><CR> :nohlsearch<CR>
-
 set hls
