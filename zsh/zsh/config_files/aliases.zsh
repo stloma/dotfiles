@@ -107,6 +107,12 @@ if [[ $(uname -s) == Linux ]]; then
   alias g='grep -iI --color=auto'
   alias tmux='tmux -2'
 fi
+if [[ $(uname -s) == Darwin ]]; then
+  alias l='ls -GF'
+  alias ll='ls -lFG'
+  alias la='ls -aGF'
+  alias g='grep -i --colour=auto'
+fi
 if [[ $(uname -s) == FreeBSD ]]; then
   alias lst='ls -tG'
   alias l='ls -GF'
