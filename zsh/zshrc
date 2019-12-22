@@ -23,20 +23,18 @@ source ${ZSH}/base16-shell/scripts/base16-atelier-sulphurpool.sh
 #
 # PLUGINS
 #
-if [[ $(echo $TTY) =~ pts ]]; then
-  source ${ZSH}/themes/gitster.zsh-theme
-  source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source $ppath/z/z.sh
-  source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-  source $ppath/zsh-vimode-visual/zsh-vimode-visual.zsh
+source ${ZSH}/themes/gitster.zsh-theme
+source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ppath/z/z.sh
+source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source $ppath/zsh-vimode-visual/zsh-vimode-visual.zsh
 
-  # Swap ctrl and caps if setxkbmap exists
-  if (( $+commands[setxkbmap] )); then
-    setxkbmap -option ctrl:swapcaps
-  fi
-
-  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+# Swap ctrl and caps if setxkbmap exists
+if (( $+commands[setxkbmap] )); then
+setxkbmap -option ctrl:swapcaps
 fi
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 if [[ $(tty) = /dev/tty1 ]]; then
   exec startx
