@@ -15,6 +15,7 @@ emacs/emacs.d/auto-save-list
 emacs/emacs.d/backups
 emacs/emacs.d/elpa
 emacs/emacs.d/.emacs.desktop
+emacs/emacs.d/.emacs.desktop.lock
 emacs/emacs.d/bookmarks
 emacs/emacs.d/places
 emacs/emacs.d/projectile-bookmarks.eld
