@@ -11,3 +11,12 @@ nvim/spell
 tags*
 vim
 structure.txt
+emacs/emacs.d/auto-save-list
+emacs/emacs.d/backups
+emacs/emacs.d/elpa
+emacs/emacs.d/.emacs.desktop
+emacs/emacs.d/bookmarks
+emacs/emacs.d/places
+emacs/emacs.d/projectile-bookmarks.eld
+emacs/emacs.d/projectile.cache
+emacs/emacs.d/recentf
