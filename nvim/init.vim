@@ -67,8 +67,6 @@ highlight markdownCodeBlock none
 "
 " Plugin Customization
 "
-autocmd User GoyoEnter Limelight
-autocmd User GoyoLeave Limelight!
 
 " remove padding after devicon
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
@@ -153,23 +151,23 @@ let g:vimwiki_list = [wiki]
 
 let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'
 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>ft :NERDTreeToggle<CR>
 nnoremap <leader><TAB> <C-w><C-w>
 
-nmap <leader>l <Plug>(ale_fix)
+nmap <leader>tl <Plug>(ale_fix)
 nmap <M-k> <Plug>(ale_previous_wrap)
 nmap <M-j> <Plug>(ale_next_wrap)
 
-map <C-f> <Plug>(easymotion-bd-f)
-map <C-j> <Plug>(easymotion-j)
-map <C-k> <Plug>(easymotion-k)
 
-nnoremap <leader>G :Goyo<CR>
+nmap <leader>tc <Plug>(easymotion-bd-f)
+" map <C-j> <Plug>(easymotion-j)
+" map <C-k> <Plug>(easymotion-k)
+
 nnoremap <leader>aw :AirlineToggleWhitespace<CR>
 
 nnoremap <leader>g :GitGutterToggle<CR>
 
-nnoremap <leader>t :TagbarToggle<CR>
+" nnoremap <leader>t :TagbarToggle<CR>
 
 nnoremap <leader>u :UndotreeToggle<CR>
 
@@ -192,45 +190,29 @@ imap <C-K> <Up>
 imap <C-L> <Right>
 imap <C-X> <del>
 
-nnoremap <leader>r :w <CR> :! browser-sync reload<CR><CR>
-
 nnoremap <leader>rc :source $MYVIMRC<CR>
 noremap <space> za
 noremap zA zR
 noremap zC zM
-nnoremap <C-s> :w<CR>
+nnoremap <leader>fs :w<CR>
 nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-inoremap <C-Space> <Esc>l
-nnoremap <C-i> ^<C-v>
-inoremap <leader>{  {<CR>}<Esc>O
-
-nnoremap + j$
-
 " buffers
-nnoremap <F5> :buffers<CR>:buffer<Space>
-map <leader>b :b#<cr>
+map <leader>bb :b#<cr>
 nnoremap <Bs> :b#<cr>
-map <leader>q :bd<cr>
+map <leader>bk :bd<cr>
 
-":Prep \Cpermissions => case sensitive search for permissions
-command! -nargs=1 Pgrep vimgrep "<args>" $PWD/**/*.py
-nnoremap <leader>P :Pgrep
-
-" Close quickfix
-autocmd FileType qf nnoremap <buffer><silent> <esc> :quit<cr>
-
-let g:clipboard = {
-  \   'name': 'xclip-xfce4-clipman',
-  \   'copy': {
-  \      '+': 'xclip -selection clipboard',
-  \      '*': 'xclip -selection clipboard',
-  \    },
-  \   'paste': {
-  \      '+': 'xclip -selection clipboard -o',
-  \      '*': 'xclip -selection clipboard -o',
-  \   },
-  \   'cache_enabled': 1,
-  \ }
+" let g:clipboard = {
+"   \   'name': 'xclip-xfce4-clipman',
+"   \   'copy': {
+"   \      '+': 'xclip -selection clipboard',
+"   \      '*': 'xclip -selection clipboard',
+"   \    },
+"   \   'paste': {
+"   \      '+': 'xclip -selection clipboard -o',
+"   \      '*': 'xclip -selection clipboard -o',
+"   \   },
+"   \   'cache_enabled': 1,
+"   \ }
