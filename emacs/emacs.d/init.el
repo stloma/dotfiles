@@ -232,7 +232,7 @@
                                         ;   ;; Don't call desktop-save-in-desktop-dir, as it prints a message.
                                         ;   (if (eq (desktop-owner) (emacs-pid))
                                         ;       (desktop-save desktop-dirname)))
-(add-hook 'auto-save-hook 'my-desktop-save)
+; (add-hook 'auto-save-hook 'my-desktop-save)
 
 (use-package org-wc)
 
