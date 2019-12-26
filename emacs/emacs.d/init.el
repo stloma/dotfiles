@@ -158,15 +158,19 @@
       "ff" 'helm-find-files
       "fr" 'ranger
       "fs" 'save-buffer
+      "fS" 'save-some-buffers
       "jj" 'ace-jump-char-mode
       "jl" 'ace-jump-line-mode
       "oa" 'org-agenda
+      "oA" 'my-archive-when-done
+      "oc" 'org-capture
       "oi" (lambda () (interactive) (find-file "~/Dropbox/Notes/orgmode/agenda/inbox.org"))
       "os" 'org-sparse-tree
       "pi" 'projectile-invalidate-cache
       "pm" 'helm-projectile
                                         ; "tw" 'fill-paragraph
       "ts" 'ispell
+      "tS" 'flyspell-mode
       "tw" 'fill-region
       "xl" 'helm-M-x
       "<return>" 'evil-ex-nohighlight
