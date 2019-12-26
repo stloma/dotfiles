@@ -286,6 +286,14 @@
            ("+" (:foreground "#823ff1" :strike-through nil))
            ))
 
+   org-agenda-custom-commands
+   '(("c" "Simple agenda view"
+     ((tags "PRIORITY=\"A\""
+      ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+       (org-agenda-overriding-header "High-priority unfinished tasks:")))
+     (agenda "")
+     (alltodo ""))))
+
    org-todo-keywords '((type "☛ TODO" "⧗ INPROGRESS" "⚑ WAITING" "|" "✔ DONE" "✘ CANCELED" ))
 
    org-todo-keyword-faces
