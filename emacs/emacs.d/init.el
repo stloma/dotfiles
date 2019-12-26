@@ -272,7 +272,12 @@
   (setq
    org-agenda-files '("~/Dropbox/Notes/org/notes" "~/Dropbox/Notes/org/agenda" "~/Dropbox/Notes/org/projects")
    org-deadline-warning-days 0
+   org-agenda-window-setup 'only-window
+   org-archive-location (concat "~/Dropbox/Notes/org/agenda/archive/archive-"
+    (format-time-string "%Y%m" (current-time)) ".org_archive::")
+   org-default-notes-file "~/Dropbox/Notes/org/agenda/inbox.org"
    org-hide-emphasis-markers t
+   org-log-done (quote time)
                                         ; org-ellipsis "↴"
                                         ; org-ellipsis "▾"
    org-ellipsis " ... "
