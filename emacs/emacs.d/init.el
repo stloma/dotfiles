@@ -136,6 +136,12 @@
   (set-face-attribute 'helm-ff-dirs nil
                       :foreground "#383a41"))
 
+(defun my-archive-when-done ()
+  "Archive current entry if it is marked as DONE (see `org-done-keywords')."
+  (interactive)
+  (when (org-entry-is-done-p)
+    (org-archive-subtree-default)))
+
 (use-package evil-leader
   :ensure t
   :init
