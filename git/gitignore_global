@@ -4,6 +4,7 @@ tags*
 .venv
 out/
 *.pyc
+*.pyo
 *.iml
 __pycache__
 .idea
