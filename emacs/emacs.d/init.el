@@ -280,7 +280,7 @@
   (define-key evil-normal-state-map (kbd "gl") 'outline-next-visible-heading)
 
   (setq
-   org-agenda-files '("~/Dropbox/Notes/org/notes" "~/Dropbox/Notes/org/agenda")
+   org-agenda-files (directory-files-recursively "~/Dropbox/Notes/org/" "\.org$")
    org-deadline-warning-days 0
    org-agenda-window-setup 'only-window
    org-archive-location (concat "~/Dropbox/Notes/org/agenda/archive/archive-"
