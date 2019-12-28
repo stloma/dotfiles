@@ -302,12 +302,18 @@
            ))
 
    org-agenda-custom-commands
-   '(("c" "Simple agenda view"
-     ((tags "PRIORITY=\"A\""
-      ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-       (org-agenda-overriding-header "High-priority unfinished tasks:")))
-     (agenda "")
-     (alltodo ""))))
+   '(("d" "My Daily View"
+      ((tags "PRIORITY=\"A\""
+             ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+              (org-agenda-overriding-header "High-priority unfinished tasks:")))
+      (agenda "")
+      (tags-todo "-RECURRING" ((org-agenda-overriding-header "Global non-recurring TODO items")))))
+     ("u" "Unscheduled tasks"
+      ((alltodo ""
+               ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done 'scheduled 'deadline))
+                (org-agenda-overriding-header "Unscheduled tasks")))))
+     ("r" "Recurring tasks"
+      ((tags-todo "RECURRING"))))
 
    org-todo-keywords '((type "☛ TODO" "⧗ INPROGRESS" "⚑ WAITING" "|" "✔ DONE" "✘ CANCELED" ))
 
