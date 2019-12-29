@@ -173,6 +173,7 @@
       "pm" 'helm-projectile
                                         ; "tw" 'fill-paragraph
       "tc" 'ace-jump-char-mode
+      "ti" 'org-toggle-inline-images
       "tl" 'ace-jump-line-mode
       "ts" 'ispell
       "tS" 'flyspell-mode
