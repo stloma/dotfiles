@@ -79,7 +79,6 @@
   (which-key-declare-prefixes ", c" "Clipboard")
   (which-key-declare-prefixes ", e" "Emacs")
   (which-key-declare-prefixes ", f" "Files")
-  (which-key-declare-prefixes ", j" "Jump")
   (which-key-declare-prefixes ", o" "Org")
   (which-key-declare-prefixes ", p" "Projectile")
   (which-key-declare-prefixes ", t" "Text")
@@ -165,8 +164,6 @@
       "fr" 'ranger
       "fs" 'save-buffer
       "fS" 'save-some-buffers
-      "jj" 'ace-jump-char-mode
-      "jl" 'ace-jump-line-mode
       "oa" 'org-agenda
       "oA" 'my-archive-when-done
       "oc" 'org-capture
@@ -175,6 +172,8 @@
       "pi" 'projectile-invalidate-cache
       "pm" 'helm-projectile
                                         ; "tw" 'fill-paragraph
+      "tc" 'ace-jump-char-mode
+      "tl" 'ace-jump-line-mode
       "ts" 'ispell
       "tS" 'flyspell-mode
       "tw" 'fill-region
