@@ -282,6 +282,8 @@
   (setq
    org-agenda-files (directory-files-recursively "~/Dropbox/Notes/org/" "\.org$")
    org-deadline-warning-days 0
+   org-agenda-start-day "-1d"
+   org-agenda-start-on-weekday nil
    org-agenda-window-setup 'only-window
    org-archive-location (concat "~/Dropbox/Notes/org/agenda/archive/archive-"
     (format-time-string "%Y%m" (current-time)) ".org_archive::")
