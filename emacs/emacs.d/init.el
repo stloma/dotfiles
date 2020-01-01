@@ -235,6 +235,8 @@
 ; (add-hook 'auto-save-hook 'my-desktop-save)
 
 (use-package org-wc)
+(use-package magit
+  :ensure t)
 
 (use-package dashboard
   :ensure t
