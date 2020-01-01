@@ -3,6 +3,7 @@ tags*
 .vscode
 .venv
 out/
+transient/
 *.pyc
 *.pyo
 *.iml
