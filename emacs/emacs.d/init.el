@@ -282,7 +282,7 @@
   (setq
    org-agenda-files (directory-files-recursively "~/Dropbox/Notes/org/" "\.org$")
    org-deadline-warning-days 0
-   org-agenda-start-day "-1d"
+   org-agenda-start-day "0d"
    org-agenda-start-on-weekday nil
    org-agenda-window-setup 'only-window
    org-archive-location (concat "~/Dropbox/Notes/org/agenda/archive/archive-"
@@ -308,8 +308,11 @@
       ((tags "PRIORITY=\"A\""
              ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
               (org-agenda-overriding-header "High-priority unfinished tasks:")))
-      (agenda "")
-      (tags-todo "-RECURRING" ((org-agenda-overriding-header "Global non-recurring TODO items")))))
+       (agenda ""
+               ((org-agenda-skip-function '(org-agenda-skip-entry-if 'done))))
+      (alltodo ""
+               ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done 'scheduled 'deadline))
+                (org-agenda-overriding-header "Unscheduled tasks")))))
      ("u" "Unscheduled tasks"
       ((alltodo ""
                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done 'scheduled 'deadline))
