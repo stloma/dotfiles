@@ -99,6 +99,15 @@ alias glol='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
 alias trw='tmux renamew'
 alias trn='tmux movew -r'
 
+listening() {
+  if [[ $(uname -s) == Linux ]]; then
+    sudo netstat -tulpn
+  fi
+  if [[ $(uname -s) == Darwin ]]; then
+    sudo lsof -i -P |grep LISTEN
+  fi
+}
+
 # conditionals
 if [[ $(uname -s) == Linux ]]; then
   alias l='ls -F --group-directories-first --color=auto'
