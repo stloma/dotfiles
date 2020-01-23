@@ -21,6 +21,8 @@
 ;; options
 (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
+(add-hook 'auto-save-hook 'org-save-all-org-buffers)
+(global-auto-revert-mode t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (save-place-mode 1)
