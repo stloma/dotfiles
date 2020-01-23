@@ -2,7 +2,7 @@ ZSH=${HOME}/.zsh
 ZSH_CACHE_DIR=${ZSH}/cache/
 fpath=($ZSH/functions $fpath)
 ppath=($ZSH/plugins)
-export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:${HOME}/bin:${HOME}/bin/arch:${HOME}/.local/bin:
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:${HOME}/bin${HOME}/.local/bin:
 autoload -U colors zsh/terminfo && colors
 autoload -U promptinit && promptinit
 autoload -U compinit && compinit    #Initilize && load completion system
