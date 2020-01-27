@@ -1,15 +1,35 @@
 let mapleader=","
+set hls
+set history=1000
 
 " text mappings
-nnoremap <leader>tc :action emacsIDEAs.AceJump<CR>
-nnoremap <leader>tf :action ReformatCode<CR>
+nnoremap <leader>tc :action emacsIDEAs.AceJump<cr>
+nnoremap <leader>tf :action ReformatCode<cr>
+nnoremap <leader>tc :action emacsIDEAs.AceJump<cr>
 
 " file mappings
-nmap <leader>fw :w<CR>
+nnoremap <leader>fw :w<cr>
+nnoremap <leader>fp :action FileStructurePopup<cr>
+nnoremap <leader>fr :action RecentFiles<cr>
+nnoremap <leader>fc :action RecentChanges<cr>
+
+" buffers
+nnoremap <leader>bk :action CloseContent<cr>
+nnoremap <leader>bu :action ReopenClosedTab<cr>
+nnoremap <leader>bb :action Switcher<cr>
+
+" editor
+nnoremap <leader>ea :action GotoAction<cr>
+
+" navigation
+nnoremap <leader>nb :action Back<cr>
+nnoremap <leader>nf :action Forward<cr>
+nnoremap <leader>nu :action MethodUp<cr>
+nnoremap <leader>nd :action MethodDown<cr>
+nnoremap <leader>ni :action GotoImplementation<cr>
 
 " copy/paste
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-nnoremap <leader><CR> :nohlsearch<CR>
-set hls
+nnoremap <leader><cr> :nohlsearch<cr>
