@@ -1,6 +1,6 @@
 # .dotfiles
 
-This is a collection of Neovim, tmux, zsh, ranger, and eslint configuration files.
+This is a collection of my configuration files.
 
 If you decide to use the install.sh script, please be careful as it may overwrite your existing configuration files.
 
