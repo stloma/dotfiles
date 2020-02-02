@@ -294,9 +294,10 @@
    org-default-notes-file "~/Dropbox/Notes/org/agenda/inbox.org"
    org-hide-emphasis-markers t
    org-log-done (quote time)
-                                        ; org-ellipsis "↴"
-                                        ; org-ellipsis "▾"
-   org-ellipsis " ... "
+   org-ellipsis " ⤵"
+   ;org-ellipsis " ↴"
+   ;org-ellipsis "▾"
+   ; org-ellipsis " ... "
 
    org-emphasis-alist
    (quote (("*" bold)
