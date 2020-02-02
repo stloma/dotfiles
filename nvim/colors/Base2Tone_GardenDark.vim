@@ -1,23 +1,23 @@
-" Base2Tone_SpaceDark (https://github.com/atelierbram/Base2Tone-vim)
+" Base2Tone_GardenDark (https://github.com/atelierbram/Base2Tone-vim)
 " Scheme: by Bram de Haan, adapted from DuoTone themes by Simurai (http://simurai.com/projects/2016/01/01/duotone-themes)
 
 " GUI color definitions
-let s:gui00 = "24242e"
-let s:gui01 = "333342"
-let s:gui02 = "515167"
-let s:gui03 = "5b5b76"
-let s:gui04 = "737391"
-let s:gui05 = "767693"
-let s:gui06 = "aaaaca"
-let s:gui07 = "ebebff"
-let s:gui08 = "5151e6"
-let s:gui09 = "dd672c"
-let s:gui0A = "ec7336"
-let s:gui0B = "7b736f"
-let s:gui0C = "fe8c52"
-let s:gui0D = "f37b3f"
-let s:gui0E = "7676f4"
-let s:gui0F = "6363ee"
+let s:gui00 = "1e1f1e"
+let s:gui01 = "2b2c2a"
+let s:gui02 = "505350"
+let s:gui03 = "5d605c"
+let s:gui04 = "696d69"
+let s:gui05 = "4cb946"
+let s:gui06 = "90d98c"
+let s:gui07 = "dcf0db"
+let s:gui08 = "1c8217"
+let s:gui09 = "d97726"
+let s:gui0A = "db9257"
+let s:gui0B = "837467"
+let s:gui0C = "e0cab8"
+let s:gui0D = "dba070"
+let s:gui0E = "3fac39"
+let s:gui0F = "25931f"
 
 " Terminal color definitions
 let s:cterm00 = "236   "
@@ -40,7 +40,7 @@ let s:cterm0F = "63    "
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "Base2Tone_SpaceDark"
+let g:colors_name = "Base2Tone_GardenDark"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr)

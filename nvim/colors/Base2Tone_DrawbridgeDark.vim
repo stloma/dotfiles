@@ -1,23 +1,23 @@
-" Base2Tone_SpaceDark (https://github.com/atelierbram/Base2Tone-vim)
+" Base2Tone_DrawbridgeDark (https://github.com/atelierbram/Base2Tone-vim)
 " Scheme: by Bram de Haan, adapted from DuoTone themes by Simurai (http://simurai.com/projects/2016/01/01/duotone-themes)
 
 " GUI color definitions
-let s:gui00 = "24242e"
-let s:gui01 = "333342"
-let s:gui02 = "515167"
-let s:gui03 = "5b5b76"
-let s:gui04 = "737391"
-let s:gui05 = "767693"
-let s:gui06 = "aaaaca"
-let s:gui07 = "ebebff"
-let s:gui08 = "5151e6"
-let s:gui09 = "dd672c"
-let s:gui0A = "ec7336"
-let s:gui0B = "7b736f"
-let s:gui0C = "fe8c52"
-let s:gui0D = "f37b3f"
-let s:gui0E = "7676f4"
-let s:gui0F = "6363ee"
+let s:gui00 = "1b1f32"
+let s:gui01 = "252a41"
+let s:gui02 = "444b6f"
+let s:gui03 = "51587b"
+let s:gui04 = "5e6587"
+let s:gui05 = "7289fd"
+let s:gui06 = "a5b3fe"
+let s:gui07 = "e1e6ff"
+let s:gui08 = "4961da"
+let s:gui09 = "4db0cb"
+let s:gui0A = "67c9e4"
+let s:gui0B = "71787a"
+let s:gui0C = "99e9ff"
+let s:gui0D = "75d5f0"
+let s:gui0E = "627af4"
+let s:gui0F = "516aec"
 
 " Terminal color definitions
 let s:cterm00 = "236   "
@@ -25,22 +25,22 @@ let s:cterm01 = "237   "
 let s:cterm02 = "240   "
 let s:cterm03 = "242   "
 let s:cterm04 = "245   "
-let s:cterm05 = "243   "
-let s:cterm06 = "248   "
-let s:cterm07 = "231   "
-let s:cterm08 = "61    "
-let s:cterm09 = "166   "
-let s:cterm0A = "202   "
-let s:cterm0B = "95    "
-let s:cterm0C = "209   "
-let s:cterm0D = "172   "
+let s:cterm05 = "69    "
+let s:cterm06 = "147   "
+let s:cterm07 = "189   "
+let s:cterm08 = "62    "
+let s:cterm09 = "38    "
+let s:cterm0A = "45    "
+let s:cterm0B = "102   "
+let s:cterm0C = "123   "
+let s:cterm0D = "51    "
 let s:cterm0E = "69    "
-let s:cterm0F = "63    "
+let s:cterm0F = "62    "
 
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "Base2Tone_SpaceDark"
+let g:colors_name = "Base2Tone_DrawbridgeDark"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
@@ -308,7 +308,7 @@ call <sid>hi("gitCommitSummary",  s:gui07, "", s:cterm07, "none", "none")
 " neovim terminal
 if has('nvim')
 hi! link TermCursor Cursor
-hi TermCursorNC ctermfg=236    ctermbg=166    guifg=s:gui00 guibg=s:gui09 guisp=NONE cterm=NONE gui=NONE
+hi TermCursorNC ctermfg=236    ctermbg=38     guifg=s:gui00 guibg=s:gui09 guisp=NONE cterm=NONE gui=NONE
   let g:terminal_color_0  = "#" . s:gui00
   let g:terminal_color_1  = "#" . s:gui0F
   let g:terminal_color_2  = "#" . s:gui02
