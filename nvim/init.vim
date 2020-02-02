@@ -19,7 +19,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vimwiki/vimwiki'
-Plugin 'vhdirk/vim-cmake'
+Plugin 'qualiabyte/vim-colorstepper'
+Plugin 'doums/darcula'
 
 call vundle#end()
 
@@ -28,7 +29,8 @@ call vundle#end()
 "
 set nocompatible
 set background=dark
-colorscheme base16-atelier-sulphurpool
+"colorscheme base16-atelier-sulphurpool
+colorscheme Base2Tone_EveningDark
 let g:airline_theme='base16'
 set termguicolors
 filetype plugin indent on
@@ -203,6 +205,10 @@ nnoremap <leader>p "+p
 map <leader>bb :b#<cr>
 nnoremap <Bs> :b#<cr>
 map <leader>bk :bd<cr>
+
+nmap <F6> <Plug>ColorstepPrev
+nmap <F7> <Plug>ColorstepNext
+nmap <S-F7> <Plug>ColorstepReload
 
 " let g:clipboard = {
 "   \   'name': 'xclip-xfce4-clipman',
