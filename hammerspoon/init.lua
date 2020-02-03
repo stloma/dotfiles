@@ -29,14 +29,14 @@ end
 --------------------
 -- Open Applications
 --------------------
-hs.hotkey.bind(mash, "t", function() launch_or_focus("iTerm") end)
+hs.hotkey.bind(mash, "space", function() launch_or_focus("iTerm") end)
 hs.hotkey.bind(mash, "e", function() launch_or_focus("Emacs") end)
 hs.hotkey.bind(mash, "f", function() launch_or_focus("Firefox") end)
-hs.hotkey.bind(mash, "c", function() launch_or_focus("Google Chrome") end)
+hs.hotkey.bind(mash, "d", function() launch_or_focus("Google Chrome") end)
 hs.hotkey.bind(mash, "s", function() launch_or_focus("Slack") end)
-hs.hotkey.bind(mash, "1", function() launch_or_focus("Pycharm") end)
-hs.hotkey.bind(mash, "2", function() launch_or_focus("IntelliJ IDEA") end)
-hs.hotkey.bind(mash, "3", function() launch_or_focus("Visual Studio Code") end)
+hs.hotkey.bind(mash, "z", function() launch_or_focus("Pycharm") end)
+hs.hotkey.bind(mash, "x", function() launch_or_focus("IntelliJ IDEA") end)
+hs.hotkey.bind(mash, "c", function() launch_or_focus("Visual Studio Code") end)
 
 
 --------------------
