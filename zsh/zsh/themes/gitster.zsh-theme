@@ -1,5 +1,3 @@
-local ret_status="%(?:%{$fg_bold[black]%} :%{$fg_no_bold[red]%} %s)"
-
 function get_pwd(){
   git_root=$PWD
   while [[ $git_root != / && ! -e $git_root/.git ]]; do
@@ -27,12 +25,15 @@ function prompt_context() {
   fi
 }
 
-# precmd() { print "" }
-
-PROMPT='$(prompt_context)%{$fg_no_bold[green]%}$(get_pwd) $ret_status%{$reset_color%}$(git_prompt_info)%{$reset_color%} '
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[magenta]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_no_bold[red]%}%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[247]%}%{$reset_color%} "
+
+local lambda="%{$fg_bold[yellow]%}λ"
+local user_pwd="$(prompt_context)%{$fg_bold[black]%}$(get_pwd)"
+local return_status="%(?:%{$fg_bold[black]%} :%{$fg_no_bold[red]%} %s)"
+
+
+PROMPT='$lambda $user_pwd $return_status$(git_prompt_info)%{$reset_color%} '
