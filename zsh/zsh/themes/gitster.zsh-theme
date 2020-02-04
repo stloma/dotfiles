@@ -29,10 +29,10 @@ function prompt_context() {
 
 # precmd() { print "" }
 
-PROMPT='$(prompt_context)%{$fg_bold[red]%}$(get_pwd) $ret_status%{$reset_color%}$(git_prompt_info)%{$reset_color%} '
+PROMPT='$(prompt_context)%{$fg_no_bold[green]%}$(get_pwd) $ret_status%{$reset_color%}$(git_prompt_info)%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[015]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_no_bold[green]%}%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_no_bold[red]%}%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[247]%}%{$reset_color%} "

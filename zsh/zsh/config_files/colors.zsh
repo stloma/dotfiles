@@ -1,4 +1,4 @@
-export LSCOLORS="bxfxcxdxbxegedabagacad"
+export LSCOLORS="exfxcxdxbxegedabagacad"
 
 man() {
   env \
