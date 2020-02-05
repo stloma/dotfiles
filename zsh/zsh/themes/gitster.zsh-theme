@@ -32,8 +32,8 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_no_bold[red]%}%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[247]%}%{$reset_color%} "
 
 local lambda="%{$fg_bold[yellow]%}λ"
-local user_pwd="$(prompt_context)%{$fg_bold[black]%}$(get_pwd)"
+local user_pwd="$(prompt_context)%{$fg_bold[black]%}"
 local return_status="%(?:%{$fg_bold[black]%} :%{$fg_no_bold[red]%} %s)"
 
 
-PROMPT='$lambda $user_pwd $return_status$(git_prompt_info)%{$reset_color%} '
+PROMPT='$lambda $user_pwd$(get_pwd) $return_status$(git_prompt_info)%{$reset_color%} '
