@@ -1,0 +1,3 @@
+--colors=path:fg:blue
+--colors=match:fg:red
+--colors=match:style:nobold
