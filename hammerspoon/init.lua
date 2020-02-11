@@ -1,4 +1,9 @@
 
+-- TODO: Menubar Config
+-- local menu_bar = hs.menubar.new()
+-- menu_bar.setTitle("hello")
+-- menu_bar.setTitle("bye")
+
 ----------------------------
 -- Hammerspoon Configuration
 ----------------------------
