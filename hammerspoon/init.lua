@@ -125,6 +125,8 @@ hs.hotkey.bind(mash, "=", function ()
 
   hs.grid.resizeWindowWider(win)
   hs.grid.resizeWindowTaller(win)
+
+  win:centerOnScreen()
 end)
 
 hs.hotkey.bind(mash, "-", function ()
@@ -132,5 +134,6 @@ hs.hotkey.bind(mash, "-", function ()
 
   hs.grid.resizeWindowThinner(win)
   hs.grid.resizeWindowShorter(win)
-end)
 
+  win:centerOnScreen()
+end)
