@@ -137,3 +137,23 @@ hs.hotkey.bind(mash, "-", function ()
 
   win:centerOnScreen()
 end)
+
+hs.hotkey.bind(mash, 'return', function()
+  local win = hs.window.focusedWindow()
+  local screen = win:screen()
+  win:move(win:frame():toUnitRect(screen:frame()), screen:next(), true, 0)
+end)
+
+-- Move window to specific screen
+--
+-- function moveWindowToDisplay(d)
+--   return function()
+--     local displays = hs.screen.allScreens()
+--     local win = hs.window.focusedWindow()
+--     win:moveToScreen(displays[d], false, true)
+--   end
+-- end
+--
+-- hs.hotkey.bind(mash, "1", moveWindowToDisplay(1))
+-- hs.hotkey.bind(mash, "2", moveWindowToDisplay(2))
+-- hs.hotkey.bind(mash, "3", moveWindowToDisplay(3))
