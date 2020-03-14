@@ -103,8 +103,18 @@ hs.hotkey.bind(mash, 'left', chain({
   grid.leftThird,
   grid.leftTwoThirds,
 }))
+hs.hotkey.bind(mash, 'h', chain({
+  grid.leftHalf,
+  grid.leftThird,
+  grid.leftTwoThirds,
+}))
 
 hs.hotkey.bind(mash, 'right', chain({
+  grid.rightHalf,
+  grid.rightThird,
+  grid.rightTwoThirds,
+}))
+hs.hotkey.bind(mash, 'l', chain({
   grid.rightHalf,
   grid.rightThird,
   grid.rightTwoThirds,
@@ -113,8 +123,16 @@ hs.hotkey.bind(mash, 'right', chain({
 hs.hotkey.bind(mash, 'up', chain({
   grid.fullScreen,
 }))
+hs.hotkey.bind(mash, 'k', chain({
+  grid.fullScreen,
+}))
 
 hs.hotkey.bind(mash, 'down', chain({
+  grid.centeredTall,
+  grid.centeredBig,
+  grid.centeredSmall,
+}))
+hs.hotkey.bind(mash, 'j', chain({
   grid.centeredTall,
   grid.centeredBig,
   grid.centeredSmall,
