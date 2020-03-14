@@ -1,6 +1,6 @@
 map('F', 'gf'); // open in background tab
 
-map('ob', 'b'); // open bookmark
+map('`', 'b'); // open bookmark
 map('ou', 't'); // open url
 
 map('<Ctrl-d>', 'd') // scroll down 1/2 page
