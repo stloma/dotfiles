@@ -16,6 +16,17 @@ end)
 
 hs.alert.show("Hammerspoon loaded")
 
+
+-------------------------
+-- Display Brightness
+-------------------------
+hs.hotkey.bind(mash, ".", function()
+  hs.brightness.set(60)
+  result = hs.brightness.get()
+  hs.alert.show(result)
+end)
+
+
 -------------------------
 -- Application Management
 -------------------------
