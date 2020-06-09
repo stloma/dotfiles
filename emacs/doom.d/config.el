@@ -35,6 +35,7 @@
 
   (setq-default left-fringe-width 40)
   (setq
+   ispell-program-name "/usr/local/bin/aspell"
    org-directory "~/org/"
    org-archive-location (concat org-directory "archive/%s::")
    org-bullets-bullet-list '("⁖" "✿" "✸")
