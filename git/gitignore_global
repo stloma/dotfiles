@@ -4,6 +4,7 @@ tags*
 .venv
 out/
 transient/
+node_modules/
 *.pyc
 *.pyo
 *.iml
