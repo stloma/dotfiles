@@ -169,7 +169,7 @@
       "oa" 'org-agenda
       "oA" 'my-archive-when-done
       "oc" 'org-capture
-      "oi" (lambda () (interactive) (find-file "~/Dropbox/Notes/orgmode/agenda/inbox.org"))
+      ;; "oi" (lambda () (interactive) (find-file "~/Dropbox/Notes/orgmode/agenda/inbox.org"))
       "os" 'org-sparse-tree
       "pi" 'projectile-invalidate-cache
       "pm" 'helm-projectile
@@ -284,14 +284,14 @@
   (define-key evil-normal-state-map (kbd "gl") 'outline-next-visible-heading)
 
   (setq
-   org-agenda-files (directory-files-recursively "~/Dropbox/Notes/org/" "\.org$")
+   ;; org-agenda-files (directory-files-recursively "~/Dropbox/Notes/org/" "\.org$")
    org-deadline-warning-days 0
    org-agenda-start-day "0d"
    org-agenda-start-on-weekday nil
    org-agenda-window-setup 'only-window
-   org-archive-location (concat "~/Dropbox/Notes/org/agenda/archive/archive-"
+   ;; org-archive-location (concat "~/Dropbox/Notes/org/agenda/archive/archive-"
     (format-time-string "%Y%m" (current-time)) ".org_archive::")
-   org-default-notes-file "~/Dropbox/Notes/org/agenda/inbox.org"
+   ;; org-default-notes-file "~/Dropbox/Notes/org/agenda/inbox.org"
    org-hide-emphasis-markers t
    org-log-done (quote time)
    org-ellipsis " ⤵"
