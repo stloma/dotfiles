@@ -1,17 +1,28 @@
+" references
+" https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
+" https://github.com/danidiaz/miscellany/blob/master/windows/.ideavimrc
+
 let mapleader=","
 set hls
 set history=1000
+set incsearch
 
-" text mappings
-nnoremap <leader>tc :action emacsIDEAs.AceJump<cr>
-nnoremap <leader>tf :action ReformatCode<cr>
-nnoremap <leader>tc :action emacsIDEAs.AceJump<cr>
+" code
+nnoremap <leader>cf :action emacsIDEAs.AceJump<cr>
+nnoremap <leader>cs :action emacsIDEAs.AceJumpSelect<cr>
+nnoremap <leader>cl :action ReformatCode<cr>
+nnoremap <leader>cc :action EditorCompleteStatement<cr>
 
 " file mappings
 nnoremap <leader>fw :w<cr>
 nnoremap <leader>fp :action FileStructurePopup<cr>
-nnoremap <leader>fr :action RecentFiles<cr>
+nnoremap <leader><leader> :action RecentFiles<cr>
 nnoremap <leader>fc :action RecentChanges<cr>
+nnoremap <leader>fl :action RecentLocations<cr>
+nnoremap <leader>ff :action GotoFile<cr>
+nnoremap <leader>fb :action ShowBookmarks<cr>
+nnoremap <leader>fm :action ToggleBookmarkWithMnemonic<cr>
+nnoremap <leader>fg :action FindInPath<cr>
 
 " buffers
 nnoremap <leader>bk :action CloseContent<cr>
@@ -22,14 +33,49 @@ nnoremap <leader>bb :action Switcher<cr>
 nnoremap <leader>ea :action GotoAction<cr>
 
 " navigation
-nnoremap <leader>nb :action Back<cr>
-nnoremap <leader>nf :action Forward<cr>
-nnoremap <leader>nu :action MethodUp<cr>
-nnoremap <leader>nd :action MethodDown<cr>
-nnoremap <leader>ni :action GotoImplementation<cr>
+" back / forward: cmd-[ / cmd-]
+" nnoremap <leader>nb :action Back<cr>
+" nnoremap <leader>nf :action Forward<cr>
+nnoremap <C-o> :action Back<cr>
+nnoremap <C-i> :action Forward<cr>
+nnoremap <M-k> :action MethodUp<cr>
+nnoremap <M-j> :action MethodDown<cr>
+nnoremap <leader>nq :action QuickImplementations<cr>
+" nnoremap <leader>ni :action GotoImplementation<cr>
+" nnoremap <leader>nd :action GotoDeclaration<cr>
+" nnoremap <leader>nu :action ShowUsages<cr>
+nnoremap <leader>nt :action GotoTest<cr>
+nnoremap <leader>nc :action GotoClass<cr>
+nnoremap <leader>ns :action GotoSymbol<cr>
+
+" errors
+nnoremap <leader>ex :action ShowErrorDescription<cr>
+nnoremap <leader>en :action GotoNextError<cr>
+nnoremap <leader>ep :action GotoPreviousError<cr>
 
 " copy/paste
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 nnoremap <leader><cr> :nohlsearch<cr>
+
+" toggle
+nnoremap <leader>tw :action EditorToggleShowWhitespaces<cr>
+nnoremap <M-d> :action ToggleDistractionFreeMode<cr>
+nnoremap <leader>tl :set number!<cr>
+
+" bookmarks
+" nnoremap <leader>bc0 :action
+
+" folds
+nnoremap <leader>zr :action ExpandAllRegions<cr>
+nnoremap <leader>zm :action CollapseAllRegions<cr>
+
+" git
+nnoremap <leader>vv :action Vcs.Operations.Popup<cr>
+nnoremap <leader>vc :action Vcs.Show.Local.Changes<cr>
+
+" help
+" :actionlist *search_term* is helpful to find mappable actions
+nnoremap <leader>?    :map<cr>
+
