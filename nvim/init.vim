@@ -5,8 +5,6 @@ set rtp+=$HOME/.config/vundle/Vundle.vim
 call vundle#begin('$HOME/.config/vundle/')
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-scripts/dbext.vim'
-Plugin 'krisajenkins/vim-postgresql-syntax'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -18,9 +16,6 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'qualiabyte/vim-colorstepper'
-Plugin 'doums/darcula'
 
 call vundle#end()
 
@@ -29,8 +24,7 @@ call vundle#end()
 "
 set nocompatible
 set background=dark
-"colorscheme base16-atelier-sulphurpool
-colorscheme Base2Tone_EveningDark
+colorscheme base16-material
 let g:airline_theme='base16'
 set termguicolors
 filetype plugin indent on
@@ -41,7 +35,6 @@ let loaded_matchparen = 1
 set list
 set listchars=tab:\ \ ,trail:\ ,
 set hidden
-" Sets number of lines above and below cursor
 set scrolloff=7
 set cmdheight=2
 set laststatus=2
@@ -65,11 +58,11 @@ set foldlevel=99
 highlight Search guibg=#782b14 guifg=#de917a
 highlight IncSearch guibg=#782b14 guifg=#de917a
 highlight markdownCodeBlock none
+autocmd BufEnter * if &filetype == "" | setlocal ft=markdown | endif
 
 "
 " Plugin Customization
 "
-
 " remove padding after devicon
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
@@ -91,15 +84,6 @@ let g:NERDTreeIndicatorMapCustom = {
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_cmd = 'CtrlPMRU'
-
-source ~/.config/nvim/dbext.conf
-
-function! DBextPostResult(db_type, buf_nr)
-  " If dealing with a Postgres database
-  if a:db_type == 'PGSQL'
-    set filetype=postgresql
-  endif
-endfunction
 
 set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
@@ -142,36 +126,19 @@ let mapleader=","
 noremap \ ,
 
 " plugins
+nnoremap <leader>op :NERDTreeToggle<CR>
+nnoremap <leader>ww <C-w><C-w>
 
-let wiki = {}
-let wiki.path = '~/Dropbox/Notes/vimwiki/home/'
-let wiki.template_path = '~/Dropbox/Notes/vimwiki/templates/'
-let wiki.template_default = 'default'
-let wiki.template_ext = '.html'
-let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
-let g:vimwiki_list = [wiki]
-
-let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'
-
-nnoremap <leader>ft :NERDTreeToggle<CR>
-nnoremap <leader><TAB> <C-w><C-w>
-
-nmap <leader>tl <Plug>(ale_fix)
+nmap <leader>cl <Plug>(ale_fix)
 nmap <M-k> <Plug>(ale_previous_wrap)
 nmap <M-j> <Plug>(ale_next_wrap)
 
 
-nmap <leader>tc <Plug>(easymotion-bd-f)
-" map <C-j> <Plug>(easymotion-j)
-" map <C-k> <Plug>(easymotion-k)
+nmap <leader>cf <Plug>(easymotion-bd-f)
 
 nnoremap <leader>aw :AirlineToggleWhitespace<CR>
 
 nnoremap <leader>g :GitGutterToggle<CR>
-
-" nnoremap <leader>t :TagbarToggle<CR>
-
-nnoremap <leader>u :UndotreeToggle<CR>
 
 " disable arrow keys
 noremap <Up> <nop>
@@ -192,10 +159,6 @@ imap <C-K> <Up>
 imap <C-L> <Right>
 imap <C-X> <del>
 
-nnoremap <leader>rc :source $MYVIMRC<CR>
-noremap <space> za
-noremap zA zR
-noremap zC zM
 nnoremap <leader>fs :w<CR>
 nnoremap <leader><CR> :noh<CR>
 vnoremap <leader>y "+y
@@ -205,10 +168,6 @@ nnoremap <leader>p "+p
 map <leader>bb :b#<cr>
 nnoremap <Bs> :b#<cr>
 map <leader>bk :bd<cr>
-
-nmap <F6> <Plug>ColorstepPrev
-nmap <F7> <Plug>ColorstepNext
-nmap <S-F7> <Plug>ColorstepReload
 
 " let g:clipboard = {
 "   \   'name': 'xclip-xfce4-clipman',
