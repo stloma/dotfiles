@@ -19,8 +19,8 @@
 
 (map! :leader
       :desc "clear highlight" "<return>" #'evil-ex-nohighlight
-      :desc "wrap text" "i w" #'fill-region
-      :desc "Jump to char" "/ c" #'avy-goto-char
+      :desc "wrap text" "i w" #'org-fill-paragraph
+      :desc "Jump to char" "c f" #'avy-goto-char
       :desc "Jump to line" "/ l" #'avy-goto-line)
 
 ;;
