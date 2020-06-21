@@ -48,6 +48,15 @@ nnoremap <leader>nt :action GotoTest<cr>
 nnoremap <leader>nc :action GotoClass<cr>
 nnoremap <leader>ns :action GotoSymbol<cr>
 
+" Emacs insert mode shortcuts
+"
+inoremap <C-f> <right>
+inoremap <C-b> <left>
+inoremap <C-d> <C-o>x
+inoremap <C-k> <C-o>D
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
+
 " errors
 nnoremap <leader>ex :action ShowErrorDescription<cr>
 nnoremap <leader>en :action GotoNextError<cr>
