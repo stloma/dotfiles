@@ -18,6 +18,7 @@
 (doom-themes-org-config)
 
 (map! :leader
+      :desc "check spelling" "i s" #'ispell-word
       :desc "clear highlight" "<return>" #'evil-ex-nohighlight
       :desc "wrap text" "i w" #'org-fill-paragraph
       :desc "Jump to char" "c f" #'avy-goto-char
