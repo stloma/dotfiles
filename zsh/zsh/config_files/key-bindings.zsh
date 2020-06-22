@@ -48,11 +48,12 @@ bindkey '^?' backward-delete-char
 # file rename magick
 bindkey "^[m" copy-prev-shell-word
 
-#bindkey '^A' beginning-of-line
-#bindkey '^B' backward-char
-#bindkey '^E' end-of-line
-#bindkey '^F' forward-char
-#bindkey '^H' vi-backward-delete-char
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^F' forward-char
+bindkey '^B' backward-char
+bindkey '^H' vi-backward-delete-char
+bindkey '^D' delete-char
 bindkey '^N' down-history
 bindkey '^P' up-history
 #bindkey '^R' history-incremental-search-backward
