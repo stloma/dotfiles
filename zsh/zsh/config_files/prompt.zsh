@@ -13,7 +13,7 @@ function zle-line-init zle-keymap-select {
     echo -ne '\e[5 q'
   fi
 
-  RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+  # RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
   RPS2=$RPS1
   zle reset-prompt
 }
