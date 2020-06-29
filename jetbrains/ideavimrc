@@ -86,6 +86,14 @@ nnoremap <leader>zm :action CollapseAllRegions<cr>
 nnoremap <leader>vv :action Vcs.Operations.Popup<cr>
 nnoremap <leader>vc :action Vcs.Show.Local.Changes<cr>
 
+" windows
+nnoremap <leader>wv :action SplitVertically<cr>
+nnoremap <leader>wh :action SplitHorizontally<cr>
+nnoremap <leader>ww :action NextSplitter<cr>
+nnoremap <leader>wp :action PrevSplitter<cr>
+nnoremap <leader>wc :action Unsplit<cr>
+
+
 " help
 " :actionlist *search_term* is helpful to find mappable actions
 nnoremap <leader>?    :map<cr>
