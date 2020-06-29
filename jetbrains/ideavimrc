@@ -12,6 +12,8 @@ nnoremap <leader>cf :action emacsIDEAs.AceJump<cr>
 nnoremap <leader>cs :action emacsIDEAs.AceJumpSelect<cr>
 nnoremap <leader>cl :action ReformatCode<cr>
 nnoremap <leader>cc :action EditorCompleteStatement<cr>
+nnoremap <leader>cr :action RunAnything<cr>
+nnoremap <leader>cd :action Debug<cr>
 
 " file mappings
 nnoremap <leader>fw :w<cr>
