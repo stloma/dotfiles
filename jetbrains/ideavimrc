@@ -13,7 +13,10 @@ nnoremap <leader>cs :action emacsIDEAs.AceJumpSelect<cr>
 nnoremap <leader>cl :action ReformatCode<cr>
 nnoremap <leader>cc :action EditorCompleteStatement<cr>
 nnoremap <leader>cr :action RunAnything<cr>
+vnoremap <leader>cr :action Refactorings.QuickListPopupAction<cr>
 nnoremap <leader>cd :action Debug<cr>
+nnoremap <leader>ct :action RunContextGroup<cr>
+nnoremap <M-r> :action Run<cr>
 
 " file mappings
 nnoremap <leader>fw :w<cr>
@@ -92,6 +95,7 @@ nnoremap <leader>wh :action SplitHorizontally<cr>
 nnoremap <leader>ww :action NextSplitter<cr>
 nnoremap <leader>wp :action PrevSplitter<cr>
 nnoremap <leader>wc :action Unsplit<cr>
+nnoremap <leader>wq :action HideAllWindows<cr>
 
 
 " help
