@@ -16,13 +16,15 @@
 
 (doom-themes-treemacs-config)
 (doom-themes-org-config)
-
 (map! :leader
       :desc "check spelling" "i s" #'ispell-word
       :desc "clear highlight" "<return>" #'evil-ex-nohighlight
       :desc "wrap text" "i w" #'org-fill-paragraph
       :desc "Jump to char" "c f" #'avy-goto-char
       :desc "Jump to line" "/ l" #'avy-goto-line)
+
+(after! evil (map! :ie "C-h" #'backward-delete-char-untabify))
+
 
 ;;
 ;; Orgmode settings
@@ -82,4 +84,5 @@
    '(org-warning ((t (:bold nil))))))
 
 (after! evil-org
-  (remove-hook 'org-tab-first-hook #'+org-cycle-only-current-subtree-h))
+  (remove-hook 'org-tab-first-hook #'+org-cycle-only-current-subtree-h)
+  (map! :ie "C-d" #'evil-delete-char))
