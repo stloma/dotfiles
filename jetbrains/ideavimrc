@@ -45,6 +45,8 @@ nnoremap <C-o> :action Back<cr>
 nnoremap <C-i> :action Forward<cr>
 nnoremap <M-k> :action MethodUp<cr>
 nnoremap <M-j> :action MethodDown<cr>
+vnoremap <M-k> :action MethodUp<cr>
+vnoremap <M-j> :action MethodDown<cr>
 nnoremap <leader>nq :action QuickImplementations<cr>
 " nnoremap <leader>ni :action GotoImplementation<cr>
 " nnoremap <leader>nd :action GotoDeclaration<cr>
