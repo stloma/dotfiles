@@ -18,7 +18,7 @@ end
 
 apps = {
   ['space'] = 'iTerm',
-  ['e'] = 'Emacs',
+  ['e'] = 'Notion',
   ['f'] = 'Firefox',
   ['d'] = 'Google Chrome',
   ['s'] = 'Slack',
