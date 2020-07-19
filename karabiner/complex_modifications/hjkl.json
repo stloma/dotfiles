@@ -1,15 +1,17 @@
 {
-  "title": "Fn + hjkl to Arrow Keys Vim",
+  "title": "mash + hjkl to Arrow Keys Vim",
   "rules": [
     {
-      "description": "Fn + hjkl to arrow keys Vim",
+      "description": "mash + hjkl to arrow keys Vim",
       "manipulators": [
         {
           "from": {
             "key_code": "h",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "left_control",
+                "left_command",
+                "left_option"
               ],
               "optional": [
                 "any"
@@ -28,7 +30,9 @@
             "key_code": "j",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "left_control",
+                "left_command",
+                "left_option"
               ],
               "optional": [
                 "any"
@@ -47,7 +51,9 @@
             "key_code": "k",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "left_control",
+                "left_command",
+                "left_option"
               ],
               "optional": [
                 "any"
@@ -66,7 +72,9 @@
             "key_code": "l",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "left_control",
+                "left_command",
+                "left_option"
               ],
               "optional": [
                 "any"
