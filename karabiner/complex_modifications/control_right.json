@@ -1,8 +1,8 @@
 {
-  "title": "Change right control to Command-Shift-Control-Option",
+  "title": "Change right control to Command-Control-Option",
   "rules": [
     {
-      "description": "Right control to Command-Shift-Control-Option",
+      "description": "Right control to Command-Control-Option",
       "manipulators": [
         {
           "type": "basic",
@@ -16,9 +16,8 @@
           },
           "to": [
             {
-              "key_code": "left_shift",
+              "key_code": "left_command",
               "modifiers": [
-                "left_command",
                 "left_control",
                 "left_option"
               ]

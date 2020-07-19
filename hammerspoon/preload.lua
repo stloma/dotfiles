@@ -2,7 +2,8 @@
 -- Hammerspoon Configuration
 ----------------------------
 
-mash = {"cmd", "alt", "ctrl", "shift"}
+mash = {"ctrl", "cmd", "alt"}
+mash_shift = {"cmd", "alt", "ctrl", "shift"}
 
 hs.window.animationDuration = 0
 
