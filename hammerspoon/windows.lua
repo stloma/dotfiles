@@ -23,6 +23,12 @@ local grid = {
   centeredTall = '2.5,0 7x12',
   centeredBig = '2.5,2.5 7x7',
   centeredSmall = '3.5,3.5 5x5',
+
+  topLeft = '0,0 6x6',
+  bottomLeft = '0,6 6x6',
+
+  topRight = '6,0 6x6',
+  bottomRight = '6,6 6x6',
 }
 
 -- https://github.com/wincent/wincent
@@ -53,40 +59,30 @@ function chain(movements)
   end
 end
 
-hs.hotkey.bind(mash, 'left', chain({
-  grid.leftHalf,
-  grid.leftThird,
-  grid.leftTwoThirds,
-}))
 hs.hotkey.bind(mash, 'h', chain({
   grid.leftHalf,
   grid.leftThird,
   grid.leftTwoThirds,
 }))
-
-hs.hotkey.bind(mash, 'right', chain({
-  grid.rightHalf,
-  grid.rightThird,
-  grid.rightTwoThirds,
+hs.hotkey.bind(mash_shift, 'h', chain({
+  grid.topLeft,
+  grid.bottomLeft,
 }))
+
 hs.hotkey.bind(mash, 'l', chain({
   grid.rightHalf,
   grid.rightThird,
   grid.rightTwoThirds,
 }))
-
-hs.hotkey.bind(mash, 'up', chain({
-  grid.fullScreen,
+hs.hotkey.bind(mash_shift, 'l', chain({
+  grid.topRight,
+  grid.bottomRight,
 }))
+
 hs.hotkey.bind(mash, 'k', chain({
   grid.fullScreen,
 }))
 
-hs.hotkey.bind(mash, 'down', chain({
-  grid.centeredTall,
-  grid.centeredBig,
-  grid.centeredSmall,
-}))
 hs.hotkey.bind(mash, 'j', chain({
   grid.centeredTall,
   grid.centeredBig,
