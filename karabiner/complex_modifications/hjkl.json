@@ -10,9 +10,6 @@
             "modifiers": {
               "mandatory": [
                 "left_alt"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -29,10 +26,7 @@
             "modifiers": {
               "mandatory": [
                 "left_alt"
-              ],
-              "optional": [
-                "any"
-             ]
+              ]
             }
           },
           "to": [
@@ -48,9 +42,6 @@
             "modifiers": {
               "mandatory": [
                 "left_alt"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
@@ -67,9 +58,6 @@
             "modifiers": {
               "mandatory": [
                 "left_alt"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
