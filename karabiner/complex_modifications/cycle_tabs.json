@@ -1,0 +1,56 @@
+{
+  "title": "cycle tabs with alt-n/p",
+  "rules": [
+    {
+      "description": "cycle tabs with alt-n/p",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_command",
+                "left_alt"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_alt"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
