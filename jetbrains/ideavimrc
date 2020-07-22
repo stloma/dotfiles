@@ -7,53 +7,72 @@ set hls
 set history=1000
 set incsearch
 
+" misc
+"
+nnoremap <leader>a :action GotoAction<cr>
+nnoremap <leader>? :map<cr>
+nnoremap <leader><cr> :nohlsearch<cr>
+
+noremap <C-o> <nop>
+noremap <C-i> <nop>
+noremap <C-]>
+
+
 " code
+"
 nnoremap <leader>cf :action emacsIDEAs.AceJump<cr>
 nnoremap <leader>cs :action emacsIDEAs.AceJumpSelect<cr>
 nnoremap <leader>cl :action ReformatCode<cr>
-nnoremap <leader>cc :action EditorCompleteStatement<cr>
-nnoremap <leader>cr :action RunAnything<cr>
-vnoremap <leader>cr :action Refactorings.QuickListPopupAction<cr>
+nnoremap <leader>cR :action RunAnything<cr>
 nnoremap <leader>cd :action Debug<cr>
-nnoremap <leader>ct :action RunContextGroup<cr>
+nnoremap <leader>cr :action RunContextGroup<cr>
+nnoremap <leader>ct :action RunClass<cr>
+nnoremap <leader>cd :action DebugClass<cr>
+nnoremap <leader>cc :action CommentByLineComment<cr>
+vnoremap <leader>cc :action CommentByLineComment<cr>
+nnoremap <leader>cC :action CommentByBlockComment<cr>
+vnoremap <leader>cC :action CommentByBlockComment<cr>
+
 nnoremap <M-r> :action Run<cr>
+inoremap <C-space> <esc>:action EditorCompleteStatement<cr>i
+
+
+" debug actions
+nnoremap <Leader>db :action ViewBreakpoints<CR>
+nnoremap <Leader>de :action EditBreakpoint<CR>
+nnoremap <Leader>dt :action ToggleLineBreakpoint<CR>
+
 
 " file mappings
+"
 nnoremap <leader>fw :w<cr>
-nnoremap <leader>fp :action FileStructurePopup<cr>
+nnoremap <leader>fs :action FileStructurePopup<cr>
 nnoremap <leader><leader> :action RecentFiles<cr>
 nnoremap <leader>fc :action RecentChanges<cr>
 nnoremap <leader>fl :action RecentLocations<cr>
 nnoremap <leader>ff :action GotoFile<cr>
 nnoremap <leader>fb :action ShowBookmarks<cr>
 nnoremap <leader>fm :action ToggleBookmarkWithMnemonic<cr>
-nnoremap <leader>fg :action FindInPath<cr>
+nnoremap <leader>fp :action FindInPath<cr>
+nnoremap <leader>fS :action SelectIn<cr>
 
 " buffers
+"
 nnoremap <leader>bk :action CloseContent<cr>
 nnoremap <leader>bu :action ReopenClosedTab<cr>
 nnoremap <leader>bb :action Switcher<cr>
 
-" editor
-nnoremap <leader>ea :action GotoAction<cr>
-
 " navigation
-" back / forward: cmd-[ / cmd-]
-" nnoremap <leader>nb :action Back<cr>
-" nnoremap <leader>nf :action Forward<cr>
-nnoremap <C-o> :action Back<cr>
-nnoremap <C-i> :action Forward<cr>
-nnoremap <M-k> :action MethodUp<cr>
-nnoremap <M-j> :action MethodDown<cr>
-vnoremap <M-k> :action MethodUp<cr>
-vnoremap <M-j> :action MethodDown<cr>
+"
 nnoremap <leader>nq :action QuickImplementations<cr>
-" nnoremap <leader>ni :action GotoImplementation<cr>
-" nnoremap <leader>nd :action GotoDeclaration<cr>
-" nnoremap <leader>nu :action ShowUsages<cr>
 nnoremap <leader>nt :action GotoTest<cr>
 nnoremap <leader>nc :action GotoClass<cr>
 nnoremap <leader>ns :action GotoSymbol<cr>
+nnoremap <Leader>nb :action ShowNavBar<cr>
+nnoremap <Leader>sS :action GotoSuperMethod<cr>
+
+nnoremap <M-k> :action MethodUp<cr>
+nnoremap <M-j> :action MethodDown<cr>
 
 " Emacs insert mode shortcuts
 "
@@ -65,17 +84,17 @@ inoremap <C-e> <End>
 inoremap <C-a> <Home>
 
 " errors
-nnoremap <leader>ex :action ShowErrorDescription<cr>
-nnoremap <leader>en :action GotoNextError<cr>
-nnoremap <leader>ep :action GotoPreviousError<cr>
-
+"
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+nnoremap <leader>E :action ShowErrorDescription<cr>
 " copy/paste
+"
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-nnoremap <leader><cr> :nohlsearch<cr>
-
 " toggle
+"
 nnoremap <leader>tw :action EditorToggleShowWhitespaces<cr>
 nnoremap <M-d> :action ToggleDistractionFreeMode<cr>
 nnoremap <leader>tl :set number!<cr>
@@ -84,14 +103,18 @@ nnoremap <leader>tl :set number!<cr>
 " nnoremap <leader>bc0 :action
 
 " folds
+"
 nnoremap <leader>zr :action ExpandAllRegions<cr>
 nnoremap <leader>zm :action CollapseAllRegions<cr>
 
 " git
+"
 nnoremap <leader>vv :action Vcs.Operations.Popup<cr>
 nnoremap <leader>vc :action Vcs.Show.Local.Changes<cr>
+nnoremap <leader>vb :action Git.Branches<cr>
 
 " windows
+"
 nnoremap <leader>wv :action SplitVertically<cr>
 nnoremap <leader>wh :action SplitHorizontally<cr>
 nnoremap <leader>ww :action NextSplitter<cr>
@@ -100,7 +123,37 @@ nnoremap <leader>wc :action Unsplit<cr>
 nnoremap <leader>wq :action HideAllWindows<cr>
 
 
-" help
-" :actionlist *search_term* is helpful to find mappable actions
-nnoremap <leader>?    :map<cr>
+" extract actions
+" source: https://gist.github.com/lpld/8dc1c6f3e942c5685f65566756ca7d27)
+nnoremap <Leader>ei :action ExtractInterface<cr>
+nnoremap <Leader>es :action ExtractSuperclass<cr>
+nnoremap <Leader>en :action ExtractClass<cr>
+nnoremap <Leader>em :action ExtractMethod<cr>
+vnoremap <Leader>em <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action ExtractMethod<cr>
+nnoremap <Leader>ev :action IntroduceVariable<cr>
+vnoremap <Leader>ev <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceVariable<cr>
+nnoremap <Leader>ef :action IntroduceField<cr>
+vnoremap <Leader>ef <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceField<cr>
+nnoremap <Leader>ep :action IntroduceParameter<cr>
+vnoremap <Leader>ep <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceParameter<cr>
+nnoremap <Leader>ec :action IntroduceConstant<cr>
+vnoremap <Leader>ec <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceConstant<cr>
 
+" refactoring actions
+"
+nnoremap <Leader>ri :action Inline<cr>
+nnoremap <Leader>rr :action RenameElement<cr>i
+nnoremap <Leader>rj :action MemberPushDown<cr>
+nnoremap <Leader>rk :action MemberPullUp<cr>
+nnoremap <Leader>rs :action ChangeSignature<cr>
+nnoremap <Leader>rd :action SafeDelete<cr>
+nnoremap <Leader>rm :action Move<cr>
+nnoremap <Leader>rc :action CopyElement<cr>
+nnoremap <leader>rp :action Refactorings.QuickListPopupAction<cr>
+vnoremap <leader>rp :action Refactorings.QuickListPopupAction<cr>
+
+" hierarchy actions
+nnoremap <Leader>hh :action TypeHierarchy<cr>
+nnoremap <Leader>hm :action MethodHierarchy<cr>
+nnoremap <Leader>hc :action CallHierarchy<cr>
+nnoremap <Leader>hd :action ShowUmlDiagramPopup<cr>
