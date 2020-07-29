@@ -29,6 +29,9 @@ local grid = {
 
   topRight = '6,0 6x6',
   bottomRight = '6,6 6x6',
+
+  topHalf = '0,0 12x6',
+  bottomHalf = '0,6 12x6',
 }
 
 -- https://github.com/wincent/wincent
@@ -59,34 +62,40 @@ function chain(movements)
   end
 end
 
-hs.hotkey.bind(mash, 'h', chain({
+hs.hotkey.bind(mash, 'left', chain({
   grid.leftHalf,
   grid.leftThird,
   grid.leftTwoThirds,
 }))
-hs.hotkey.bind(mash_shift, 'h', chain({
+hs.hotkey.bind(mash_shift, 'left', chain({
   grid.topLeft,
   grid.bottomLeft,
 }))
 
-hs.hotkey.bind(mash, 'l', chain({
+hs.hotkey.bind(mash, 'right', chain({
   grid.rightHalf,
   grid.rightThird,
   grid.rightTwoThirds,
 }))
-hs.hotkey.bind(mash_shift, 'l', chain({
+hs.hotkey.bind(mash_shift, 'right', chain({
   grid.topRight,
   grid.bottomRight,
 }))
 
-hs.hotkey.bind(mash, 'k', chain({
+hs.hotkey.bind(mash, 'up', chain({
   grid.fullScreen,
 }))
+hs.hotkey.bind(mash_shift, 'up', chain({
+  grid.topHalf,
+}))
 
-hs.hotkey.bind(mash, 'j', chain({
+hs.hotkey.bind(mash, 'down', chain({
   grid.centeredTall,
   grid.centeredBig,
   grid.centeredSmall,
+}))
+hs.hotkey.bind(mash_shift, 'down', chain({
+  grid.bottomHalf,
 }))
 
 -- grow window
