@@ -2,10 +2,15 @@
 -- Application Management
 -------------------------
 
+    --if appName == 'Firefox' then app = hs.appfinder.appFromName(apps['f'])
+    --  if app ~= nil then return launch_or_focus(apps['f']) end
 -- https://github.com/philc/hammerspoon-config/
 function launch_or_focus(appName)
   local app = hs.appfinder.appFromName(appName)
   if app == nil then
+    if (appName == 'Firefox' and hs.appfinder.appFromName(apps['f']) ~= null) then
+      return launch_or_focus(apps['f'])
+    end
     hs.application.launchOrFocus(appName)
   else
     windows = app:allWindows()
@@ -19,8 +24,8 @@ end
 apps = {
   ['space'] = 'iTerm',
   ['e'] = 'Notion',
-  ['f'] = 'Firefox',
-  ['d'] = 'Google Chrome',
+  ['d'] = 'Firefox',
+  ['f'] = 'Google Chrome',
   ['s'] = 'Slack',
   ['a'] = 'Spotify',
   ['z'] = 'Pycharm',
