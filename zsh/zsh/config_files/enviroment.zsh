@@ -13,6 +13,6 @@ fi
 
 export PAGER="less -m"
 export MANPAGER="less -m"
-export RIPGREP_CONFIG_PATH="/Users/lockwood/.ripgreprc"
+export RIPGREP_CONFIG_PATH="~/.ripgreprc"
 
 #export LESS="-R"
