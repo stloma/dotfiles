@@ -112,6 +112,7 @@ nnoremap <leader>zm :action CollapseAllRegions<cr>
 nnoremap <leader>vv :action Vcs.Operations.Popup<cr>
 nnoremap <leader>vc :action Vcs.Show.Local.Changes<cr>
 nnoremap <leader>vb :action Git.Branches<cr>
+nnoremap <leader>vl :action Vcs.Show.Local.Changes<cr>
 
 " windows
 "
