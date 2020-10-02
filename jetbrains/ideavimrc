@@ -38,9 +38,9 @@ inoremap <C-space> <esc>:action EditorCompleteStatement<cr>i
 
 
 " debug actions
-nnoremap <Leader>db :action ViewBreakpoints<CR>
-nnoremap <Leader>de :action EditBreakpoint<CR>
-nnoremap <Leader>dt :action ToggleLineBreakpoint<CR>
+nnoremap <leader>db :action ViewBreakpoints<CR>
+nnoremap <leader>de :action EditBreakpoint<CR>
+nnoremap <leader>dt :action ToggleLineBreakpoint<CR>
 
 
 " file mappings
@@ -68,8 +68,8 @@ nnoremap <leader>nq :action QuickImplementations<cr>
 nnoremap <leader>nt :action GotoTest<cr>
 nnoremap <leader>nc :action GotoClass<cr>
 nnoremap <leader>ns :action GotoSymbol<cr>
-nnoremap <Leader>nb :action ShowNavBar<cr>
-nnoremap <Leader>sS :action GotoSuperMethod<cr>
+nnoremap <leader>nb :action ShowNavBar<cr>
+nnoremap <leader>sS :action GotoSuperMethod<cr>
 nnoremap <leader>no :action SelectInProjectView<cr>
 
 nnoremap <M-k> :action MethodUp<cr>
@@ -127,35 +127,35 @@ nnoremap <leader>wq :action HideAllWindows<cr>
 
 " extract actions
 " source: https://gist.github.com/lpld/8dc1c6f3e942c5685f65566756ca7d27)
-nnoremap <Leader>ei :action ExtractInterface<cr>
-nnoremap <Leader>es :action ExtractSuperclass<cr>
-nnoremap <Leader>en :action ExtractClass<cr>
-nnoremap <Leader>em :action ExtractMethod<cr>
-vnoremap <Leader>em <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action ExtractMethod<cr>
-nnoremap <Leader>ev :action IntroduceVariable<cr>
-vnoremap <Leader>ev <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceVariable<cr>
-nnoremap <Leader>ef :action IntroduceField<cr>
-vnoremap <Leader>ef <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceField<cr>
-nnoremap <Leader>ep :action IntroduceParameter<cr>
-vnoremap <Leader>ep <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceParameter<cr>
-nnoremap <Leader>ec :action IntroduceConstant<cr>
-vnoremap <Leader>ec <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceConstant<cr>
+nnoremap <leader>ei :action ExtractInterface<cr>
+nnoremap <leader>es :action ExtractSuperclass<cr>
+nnoremap <leader>en :action ExtractClass<cr>
+nnoremap <leader>em :action ExtractMethod<cr>
+vnoremap <leader>em <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action ExtractMethod<cr>
+nnoremap <leader>ev :action IntroduceVariable<cr>
+vnoremap <leader>ev <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceVariable<cr>
+nnoremap <leader>ef :action IntroduceField<cr>
+vnoremap <leader>ef <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceField<cr>
+nnoremap <leader>ep :action IntroduceParameter<cr>
+vnoremap <leader>ep <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceParameter<cr>
+nnoremap <leader>ec :action IntroduceConstant<cr>
+vnoremap <leader>ec <Esc>gvhh:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action IntroduceConstant<cr>
 
 " refactoring actions
 "
-nnoremap <Leader>ri :action Inline<cr>
-nnoremap <Leader>rr :action RenameElement<cr>i
-nnoremap <Leader>rj :action MemberPushDown<cr>
-nnoremap <Leader>rk :action MemberPullUp<cr>
-nnoremap <Leader>rs :action ChangeSignature<cr>
-nnoremap <Leader>rd :action SafeDelete<cr>
-nnoremap <Leader>rm :action Move<cr>
-nnoremap <Leader>rc :action CopyElement<cr>
+nnoremap <leader>ri :action Inline<cr>
+nnoremap <leader>rr :action RenameElement<cr>i
+nnoremap <leader>rj :action MemberPushDown<cr>
+nnoremap <leader>rk :action MemberPullUp<cr>
+nnoremap <leader>rs :action ChangeSignature<cr>
+nnoremap <leader>rd :action SafeDelete<cr>
+nnoremap <leader>rm :action Move<cr>
+nnoremap <leader>rc :action CopyElement<cr>
 nnoremap <leader>rp :action Refactorings.QuickListPopupAction<cr>
 vnoremap <leader>rp :action Refactorings.QuickListPopupAction<cr>
 
 " hierarchy actions
-nnoremap <Leader>hh :action TypeHierarchy<cr>
-nnoremap <Leader>hm :action MethodHierarchy<cr>
-nnoremap <Leader>hc :action CallHierarchy<cr>
-nnoremap <Leader>hd :action ShowUmlDiagramPopup<cr>
+nnoremap <leader>hh :action TypeHierarchy<cr>
+nnoremap <leader>hm :action MethodHierarchy<cr>
+nnoremap <leader>hc :action CallHierarchy<cr>
+nnoremap <leader>hd :action ShowUmlDiagramPopup<cr>
