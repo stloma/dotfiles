@@ -70,6 +70,7 @@ nnoremap <leader>nc :action GotoClass<cr>
 nnoremap <leader>ns :action GotoSymbol<cr>
 nnoremap <Leader>nb :action ShowNavBar<cr>
 nnoremap <Leader>sS :action GotoSuperMethod<cr>
+nnoremap <leader>no :action SelectInProjectView<cr>
 
 nnoremap <M-k> :action MethodUp<cr>
 nnoremap <M-j> :action MethodDown<cr>
