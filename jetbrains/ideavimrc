@@ -54,6 +54,7 @@ nnoremap <leader>ff :action GotoFile<cr>
 nnoremap <leader>fb :action ShowBookmarks<cr>
 nnoremap <leader>fm :action ToggleBookmarkWithMnemonic<cr>
 nnoremap <leader>fp :action FindInPath<cr>
+nnoremap <leader>fP :action CopyPathFromRepositoryRootProvider<cr>
 nnoremap <leader>fS :action SelectIn<cr>
 
 " buffers
