@@ -126,13 +126,13 @@ hs.hotkey.bind(mash, 'return', function()
 end)
 
 -- Select window by hint
-hs.hotkey.bind(mash, "w", hs.hints.windowHints)
+-- hs.hotkey.bind(mash, "w", hs.hints.windowHints)
 
 -- Experimental expose views
-hs.hotkey.bind(mash,'i','Expose',function()
-  expose = hs.expose.new(nil,{showThumbnails=true})
-  expose:toggleShow()
-end)
+-- hs.hotkey.bind(mash,'i','Expose',function()
+--   expose = hs.expose.new(nil,{showThumbnails=true})
+--   expose:toggleShow()
+-- end)
 
 
 -- TODO: Handle running windows by name
