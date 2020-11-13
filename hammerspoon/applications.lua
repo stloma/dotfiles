@@ -30,7 +30,7 @@ apps = {
   ['a'] = 'Music',
   ['z'] = 'Pycharm',
   ['x'] = 'IntelliJ IDEA',
-  ['c'] = 'Visual Studio Code'
+  ['c'] = 'Things'
 }
 
 for key, app in pairs(apps) do
