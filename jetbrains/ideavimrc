@@ -12,6 +12,8 @@ set incsearch
 nnoremap <leader>a :action GotoAction<cr>
 nnoremap <leader>? :map<cr>
 nnoremap <leader><cr> :nohlsearch<cr>
+" don't jump to first result when highlighting word under cursor
+nnoremap * *``
 
 noremap <C-o> <nop>
 noremap <C-i> <nop>
