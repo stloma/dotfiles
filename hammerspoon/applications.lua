@@ -23,7 +23,7 @@ end
 
 apps = {
   ['space'] = 'iTerm',
-  ['e'] = 'Obsidian',
+  ['e'] = 'Evernote',
   ['d'] = 'Firefox',
   ['f'] = 'Google Chrome',
   ['s'] = 'Slack',
