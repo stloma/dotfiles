@@ -34,6 +34,8 @@ nnoremap <leader>cc :action CommentByLineComment<cr>
 vnoremap <leader>cc :action CommentByLineComment<cr>
 nnoremap <leader>cC :action CommentByBlockComment<cr>
 vnoremap <leader>cC :action CommentByBlockComment<cr>
+nnoremap <leader>cu :action FindUsages<cr>
+nnoremap <leader>cU :action ShowRecentFindUsagesGroup<cr>
 
 nnoremap <M-r> :action Run<cr>
 inoremap <C-space> <esc>:action EditorCompleteStatement<cr>i
