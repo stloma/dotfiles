@@ -25,6 +25,7 @@ noremap <C-]>
 nnoremap <leader>cf :action emacsIDEAs.AceJump<cr>
 nnoremap <leader>cs :action emacsIDEAs.AceJumpSelect<cr>
 nnoremap <leader>cl :action ReformatCode<cr>
+vnoremap <leader>cl :action ReformatCode<cr>
 nnoremap <leader>cR :action RunAnything<cr>
 nnoremap <leader>cd :action Debug<cr>
 nnoremap <leader>cr :action RunContextGroup<cr>
