@@ -96,6 +96,7 @@ alias glst='git log --stat'
 alias glol='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
 alias gum='git fetch && git update-ref refs/heads/master origin/master'
 alias gff='gum && git rebase -i master'
+alias gsf='git show --pretty=oneline --stat'
 
 # tmux
 alias trw='tmux renamew'
