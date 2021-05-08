@@ -1,0 +1,19 @@
+{
+	"animation_enabled": false,
+	"caret_style": "smooth",
+	"close_windows_when_empty": false,
+	"draw_white_space": "selection",
+	"font_face": "Hack Nerd Font Mono",
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+	],
+	"line_numbers": false,
+	"match_selection": false,
+	"scroll_past_end": true,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabgs_to_spaces": true,
+	"word_wrap": "auto",
+	"wrap_width": 100
+}
