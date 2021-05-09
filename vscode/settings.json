@@ -1,16 +1,45 @@
 {
-    "workbench.colorTheme": "Material Theme",
-    "editor.fontFamily": "Inconsolata",
-    "editor.fontSize": 15,
-    "vim.easymotion": true,
-    "vim.easymotionMarkerBackgroundColor": "red",
-    "vim.easymotionMarkerFontWeight": "bold",
-    "vim.easymotionMarkerFontFamily": "Inconsolata",
-    "vim.easymotionMarkerHeight": 14,
-    "vim.easymotionMarkerWidthPerChar": 12,
-    "vim.easymotionMarkerYOffset": 5,
-    "vim.easymotionMarkerForegroundColorOneChar": "red",
-    "vim.easymotionMarkerFontSize": "14",
-    "vim.leader": ",",
-    "window.zoomLevel": 0
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "Hack Nerd Font Mono",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": false,
+  "workbench.colorCustomizations": {
+    "[Atelier_SulphurpoolDark]": {
+      "editorGutter.background": "#202746",
+      "activityBar.activeBackground": "#ff0000",
+      "list": "#ff0000",
+      "markdo": "#ff0000"
+    },
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
+  "breadcrumbs.enabled": false,
+  "workbench.iconTheme": null,
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+          "before": ["u"],
+          "commands": ["undo"]
+      },
+      {
+          "before": ["<C-r>"],
+          "commands": ["redo"]
+      }
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.easymotionMarkerFontFamily": "Inconsolata",
+  "vim.easymotionMarkerHeight": 14,
+  "vim.easymotionMarkerWidthPerChar": 12,
+  "vim.easymotionMarkerYOffset": 5,
+  "vim.easymotionMarkerFontSize": "14",
+  "vim.leader": ",",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "editor.fontSize": 14,
+  "editor.insertSpaces": false
 }
