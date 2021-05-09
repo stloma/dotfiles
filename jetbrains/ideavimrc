@@ -52,7 +52,7 @@ nnoremap <leader>dt :action ToggleLineBreakpoint<CR>
 "
 nnoremap <leader>fw :w<cr>
 nnoremap <leader>fs :action FileStructurePopup<cr>
-nnoremap <leader><leader> :action RecentFiles<cr>
+nnoremap <leader><leader> :action Switcher<cr>
 nnoremap <leader>fc :action RecentChanges<cr>
 nnoremap <leader>fl :action RecentLocations<cr>
 nnoremap <leader>ff :action GotoFile<cr>
@@ -66,7 +66,6 @@ nnoremap <leader>fS :action SelectIn<cr>
 "
 nnoremap <leader>bk :action CloseContent<cr>
 nnoremap <leader>bu :action ReopenClosedTab<cr>
-nnoremap <leader>bb :action Switcher<cr>
 
 " navigation
 "
@@ -92,8 +91,8 @@ inoremap <C-a> <Home>
 
 " errors
 "
-nnoremap ]e :action GotoNextError<cr>
-nnoremap [e :action GotoPreviousError<cr>
+nnoremap <leader>ne :action GotoNextError<cr>
+nnoremap <leader>nE :action GotoPreviousError<cr>
 nnoremap <leader>E :action ShowErrorDescription<cr>
 " copy/paste
 "
