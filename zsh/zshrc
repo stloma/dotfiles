@@ -18,6 +18,7 @@ source ${ZSH}/config_files/key-bindings.zsh
 source ${ZSH}/config_files/prompt.zsh
 source ${ZSH}/config_files/setopt.zsh
 source ${ZSH}/config_files/spectrum.zsh
+source ${ZSH}/config_files/fzf.zsh
 
 # source ${ZSH}/base16-shell/scripts/base16-atelier-sulphurpool.sh
 source ${ZSH}/base16-shell/scripts/base16-material.sh
