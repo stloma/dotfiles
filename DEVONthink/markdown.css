@@ -1,0 +1,139 @@
+
+body {
+    padding: 2em 4em;
+    font-size: 15px;
+    max-width: 660px;
+    margin: 0 auto;
+    word-wrap: break-word;
+    font-family: Inter;
+    line-height: 150%;
+}
+
+ul {
+}
+
+figure, img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+
+/*
+pre, code {
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  padding: 1px;
+
+}
+*/
+
+h1 {
+  /*
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+  margin-top:4em;
+  */
+
+  font-size: 2em;
+  color: #525252;
+  line-height: 1.2;
+  font-weight: 300;
+  border-bottom: 1px solid #ddd;
+  margin-top:3em;
+}
+
+h2 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #eee;
+  color: #666;
+  margin-top:2em;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: #ccc;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+
+pre, code {
+  font-size: 0.85em;
+  font-family: LiberationMono Nerd Font Mono, Consolas, Inconsolata, Courier, monospace;
+}
+
+code {
+  margin: 0 0.15em;
+  padding: 0 0.3em;
+  white-space: pre-wrap;
+  border: 1px solid #EAEAEA;
+  background-color: #F8F8F8;
+  border-radius: 3px;
+  display: inline; /* added to fix Yahoo block display of inline code */
+}
+
+pre {
+  font-size: 1em;
+  line-height: 1.2em;
+  overflow: auto;
+}
+
+pre code {
+  white-space: pre;
+  overflow: auto; /* fixes issue #70: Firefox/Thunderbird: Code blocks with horizontal scroll would have bad background colour */
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 0.5em 0.7em;
+  display: block !important; /* added to counteract the Yahoo-specific `code` rule; without this, code blocks in Blogger are broken */
+}
+
+a {
+  text-decoration: none;
+  color: #24a0ed;
+}
+
+blockquote, q {
+  border-left: 4px solid #DDD;
+  padding: 0 1em;
+  color: #777;
+  quotes: none;
+  margin:2em;
+  margin-left:0px;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+/*
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote:before {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+*/
