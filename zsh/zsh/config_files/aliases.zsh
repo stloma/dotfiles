@@ -82,7 +82,7 @@ alias dstats='docker stats'
 
 # git
 alias gst='git status -s'
-alias gaa='git add -A'
+alias gaa='git add -A && git status -s'
 alias gco='git checkout'
 alias gci='git commit -m'
 alias gcv='git commit -v'
