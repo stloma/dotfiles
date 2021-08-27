@@ -1,6 +1,11 @@
 :root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
+    --mermaid-sequence-numbers: on;
+    --mermaid-theme: neutral;
+    --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+    --mermaid-flowchart-curve: linear;
+    --mermaid--gantt-left-padding: 75;
 }
 
 
