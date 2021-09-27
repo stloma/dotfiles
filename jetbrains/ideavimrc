@@ -66,6 +66,7 @@ nnoremap <leader>fS :action SelectIn<cr>
 "
 nnoremap <leader>bk :action CloseContent<cr>
 nnoremap <leader>bu :action ReopenClosedTab<cr>
+nnoremap <leader>bb :action RecentLocations<cr>
 
 " navigation
 "
