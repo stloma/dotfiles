@@ -2,9 +2,6 @@ ZSH=${HOME}/.zsh
 ZSH_CACHE_DIR=${ZSH}/cache/
 fpath=($ZSH/functions $fpath)
 ppath=($ZSH/plugins)
-autoload -U colors zsh/terminfo && colors
-autoload -U promptinit && promptinit
-autoload -U compinit && compinit    #Initilize && load completion system
 
 source ${ZSH}/config_files/path.zsh
 source ${ZSH}/config_files/local.zsh
@@ -31,6 +28,10 @@ source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ppath/z/z.plugin.zsh
 source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source $ppath/zsh-vimode-visual/zsh-vimode-visual.zsh
+
+autoload -U colors zsh/terminfo && colors
+autoload -U promptinit && promptinit
+autoload -U compinit && compinit    #Initilize && load completion system
 
 # Swap ctrl and caps if setxkbmap exists
 if (( $+commands[setxkbmap] )); then
