@@ -28,7 +28,7 @@ source ${ZSH}/base16-shell/scripts/base16-material.sh
 #
 source ${ZSH}/themes/gitster.zsh-theme
 source $ppath/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ppath/z/z.sh
+source $ppath/z/z.plugin.zsh
 source $ppath/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source $ppath/zsh-vimode-visual/zsh-vimode-visual.zsh
 
